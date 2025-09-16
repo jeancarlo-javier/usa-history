@@ -7,8 +7,13 @@
     "longitude": -76.6122,
     "description": "The Great Railroad Strike of 1877 began in Baltimore and spread nationwide, marking the first major labor uprising in American history. Workers protested wage cuts amid economic depression, leading to federal troops being deployed to restore order.",
     "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&h=300&fit=crop",
-    "modernConnection": "This strike established precedents for federal intervention in labor disputes and highlighted the ongoing tensions between workers and corporations that persist in modern labor relations and union organizing efforts.",
-    "significance": 8
+    "modernConnection": "This strike set precedents for federal intervention in labor disputes and highlighted tensions between workers and corporations that persist in today’s union organizing and gig‑economy debates.",
+    "significance": 8,
+    "tags": ["labor", "railroads"],
+    "sources": [
+      { "title": "Building the American Republic, Vol. 2", "author": "Dailey", "year": 2018 },
+      { "title": "Library of Congress: The Great Railroad Strike of 1877", "url": "https://www.loc.gov/" }
+    ]
   },
   {
     "id": 2,
@@ -18,9 +23,14 @@
     "longitude": -74.4014,
     "description": "Thomas Edison received his patent for the incandescent light bulb in Menlo Park, New Jersey, revolutionizing lighting and laying the foundation for the electrical industry.",
     "image": "https://images.unsplash.com/photo-1606838132738-aa7c2513d376?w=400&h=300&fit=crop",
-    "modernConnection": "Edison's innovation sparked the modern electrical grid system and established the research and development model that continues to drive technological advancement in Silicon Valley and beyond.",
+    "modernConnection": "Edison's research model and infrastructure buildout prefigure modern R&D ecosystems and platform technologies.",
     "significance": 10,
-    "prominent": true
+    "prominent": true,
+    "tags": ["technology", "electricity"],
+    "sources": [
+      { "title": "Edison’s Patent (U.S. 223,898)", "url": "https://patents.google.com/patent/US223898A" },
+      { "title": "Building the American Republic, Vol. 2", "author": "Dailey", "year": 2018 }
+    ]
   },
   {
     "id": 3,
@@ -28,11 +38,33 @@
     "year": 1882,
     "latitude": 41.4993,
     "longitude": -81.6944,
-    "description": "John D. Rockefeller formed the Standard Oil Trust in Cleveland, creating America's first major monopoly and controlling 90% of oil refining in the United States.",
+    "description": "John D. Rockefeller formed the Standard Oil Trust in Cleveland, creating a dominant monopoly that controlled most U.S. oil refining.",
     "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-    "modernConnection": "The Standard Oil monopoly led to antitrust legislation that continues to regulate big tech companies like Google, Amazon, and Meta, addressing similar concerns about market concentration and consumer protection.",
+    "modernConnection": "Standard Oil’s consolidation catalyzed antitrust law—paralleling today’s concerns about platform dominance in big tech.",
     "significance": 9,
-    "prominent": true
+    "prominent": true,
+    "tags": ["antitrust", "corporate"],
+    "sources": [
+      { "title": "Sherman Antitrust Act (1890)", "url": "https://www.ourdocuments.gov/" },
+      { "title": "Building the American Republic, Vol. 2", "author": "Dailey", "year": 2018 }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Interstate Commerce Act",
+    "year": 1887,
+    "latitude": 38.9072,
+    "longitude": -77.0369,
+    "description": "Congress created the Interstate Commerce Commission to regulate railroad rates and curb unfair practices—an early federal step toward regulating big business.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=300&fit=crop",
+    "modernConnection": "Establishes a template for sector‑specific regulation and independent commissions used throughout the 20th century and today.",
+    "significance": 8,
+    "prominent": true,
+    "tags": ["regulation", "railroads"],
+    "sources": [
+      { "title": "Interstate Commerce Act (1887)", "url": "https://www.archives.gov/milestone-documents" },
+      { "title": "Building the American Republic, Vol. 2", "author": "Dailey", "year": 2018 }
+    ]
   },
   {
     "id": 5,
@@ -40,10 +72,30 @@
     "year": 1886,
     "latitude": 41.8781,
     "longitude": -87.6298,
-    "description": "A labor protest in Chicago for the eight-hour workday turned violent, resulting in deaths and the trial of eight anarchists, becoming a symbol of the labor movement.",
+    "description": "A labor rally in Chicago for the eight‑hour day turned violent, leading to fatalities and the trial of anarchists; it became a defining moment for the labor movement.",
     "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-    "modernConnection": "The fight for worker rights and reasonable hours continues today in debates over work-life balance, gig economy regulations, and the push for a four-day work week.",
-    "significance": 8
+    "modernConnection": "Shapes global labor commemoration (May Day) and frames ongoing debates over policing, protest, and worker rights.",
+    "significance": 8,
+    "tags": ["labor", "protest"],
+    "sources": [
+      { "title": "Chicago Historical Society: Haymarket Affair", "url": "https://www.chicagohistory.org/" },
+      { "title": "Building the American Republic, Vol. 2", "author": "Dailey", "year": 2018 }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Homestead Strike",
+    "year": 1892,
+    "latitude": 40.407,
+    "longitude": -79.911,
+    "description": "Steelworkers struck at Carnegie’s Homestead mill; a violent clash with Pinkertons and state militia ensued, weakening organized labor in heavy industry.",
+    "image": "https://images.unsplash.com/photo-1541746972996-4e0b0f93e586?w=400&h=300&fit=crop",
+    "modernConnection": "Highlights the power imbalance between large firms and labor—echoing in today’s debates over unionization in logistics and tech.",
+    "significance": 8,
+    "tags": ["labor", "steel"],
+    "sources": [
+      { "title": "Homestead Strike – Encyclopedia of U.S. Labor", "url": "https://www.britannica.com/event/Homestead-Strike" }
+    ]
   },
   {
     "id": 7,
@@ -51,11 +103,60 @@
     "year": 1890,
     "latitude": 38.9072,
     "longitude": -77.0369,
-    "description": "The Sherman Antitrust Act was passed in Washington D.C., becoming the first major law to regulate monopolies and trusts in American business.",
+    "description": "Congress passed the first federal law aimed at curbing trusts and monopolies.",
     "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=300&fit=crop",
-    "modernConnection": "This landmark legislation continues to shape modern antitrust enforcement against tech giants, pharmaceutical companies, and other industries accused of anti-competitive practices.",
+    "modernConnection": "Provides the legal backbone for modern antitrust enforcement against dominant platforms and mergers.",
     "significance": 9,
-    "prominent": true
+    "prominent": true,
+    "tags": ["antitrust", "law"],
+    "sources": [
+      { "title": "Sherman Antitrust Act (1890)", "url": "https://www.ourdocuments.gov/" }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Ellis Island Opens",
+    "year": 1892,
+    "latitude": 40.6995,
+    "longitude": -74.0396,
+    "description": "The federal immigration station at Ellis Island opened, processing millions during peak industrial growth and urbanization.",
+    "image": "https://images.unsplash.com/photo-1444723121867-7a241cacace9?w=400&h=300&fit=crop",
+    "modernConnection": "Frames debates over immigration policy, labor supply, and American identity that persist today.",
+    "significance": 7,
+    "tags": ["immigration", "urbanization"],
+    "sources": [
+      { "title": "Statue of Liberty – Ellis Island Foundation", "url": "https://www.libertyellisfoundation.org/" }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Panic of 1893",
+    "year": 1893,
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "description": "A severe economic depression led to bank failures and mass unemployment, intensifying calls for monetary and regulatory reforms.",
+    "image": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=400&h=300&fit=crop",
+    "modernConnection": "Early test of federal capacity to stabilize finance; foreshadows later central banking and crisis responses.",
+    "significance": 8,
+    "tags": ["finance", "crisis"],
+    "sources": [
+      { "title": "Federal Reserve Education: Panics of the 19th Century", "url": "https://www.federalreserveeducation.org/" }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Pullman Strike",
+    "year": 1894,
+    "latitude": 41.6596,
+    "longitude": -87.5987,
+    "description": "A nationwide railroad boycott led by Eugene V. Debs was broken by federal injunctions and troops; the Supreme Court upheld broad use of injunctions against labor.",
+    "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&h=300&fit=crop",
+    "modernConnection": "Precedents for federal intervention and labor law continue to shape organizing and strike strategy.",
+    "significance": 8,
+    "tags": ["labor", "railroads"],
+    "sources": [
+      { "title": "Debs v. United States (1919) context", "url": "https://supreme.justia.com/" }
+    ]
   },
   {
     "id": 11,
@@ -63,11 +164,15 @@
     "year": 1901,
     "latitude": 40.7589,
     "longitude": -73.9851,
-    "description": "J.P. Morgan created U.S. Steel Corporation in New York, the world's first billion-dollar corporation, by consolidating Carnegie Steel and other companies.",
+    "description": "J.P. Morgan created U.S. Steel by consolidating Carnegie Steel and others—the world’s first billion‑dollar corporation.",
     "image": "https://images.unsplash.com/photo-1541746972996-4e0b0f93e586?w=400&h=300&fit=crop",
-    "modernConnection": "Morgan's creation of the first billion-dollar corporation established the template for modern mega-mergers and the formation of today's trillion-dollar tech companies like Apple and Microsoft.",
+    "modernConnection": "Establishes the model for mega‑mergers and corporate finance that persists into the era of trillion‑dollar firms.",
     "significance": 9,
-    "prominent": true
+    "prominent": true,
+    "tags": ["corporate", "steel"],
+    "sources": [
+      { "title": "U.S. Steel – Company History", "url": "https://www.ussteel.com/" }
+    ]
   },
   {
     "id": 12,
@@ -75,11 +180,46 @@
     "year": 1903,
     "latitude": 36.0181,
     "longitude": -75.6682,
-    "description": "Orville and Wilbur Wright achieved the first powered flight at Kitty Hawk, North Carolina, launching the aviation age.",
+    "description": "Orville and Wilbur Wright achieved the first powered flight at Kitty Hawk, launching the aviation age.",
     "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop",
-    "modernConnection": "The Wright brothers' innovation spirit parallels modern aerospace advances, from SpaceX's reusable rockets to the development of electric aircraft and urban air mobility solutions.",
+    "modernConnection": "Innovation in aviation set the stage for global connectivity and modern aerospace industries.",
     "significance": 10,
-    "prominent": true
+    "prominent": true,
+    "tags": ["technology", "aviation"],
+    "sources": [
+      { "title": "Wright Brothers Papers – Library of Congress", "url": "https://www.loc.gov/collections/wright-brothers-papers/" }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Northern Securities Co. v. United States",
+    "year": 1904,
+    "latitude": 38.9072,
+    "longitude": -77.0369,
+    "description": "The Supreme Court ordered the dissolution of the Northern Securities railroad trust—early proof that the Sherman Act could break up monopolies.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=300&fit=crop",
+    "modernConnection": "A key precedent for structural remedies in antitrust—relevant to platform breakups today.",
+    "significance": 8,
+    "prominent": true,
+    "tags": ["antitrust", "law"],
+    "sources": [
+      { "title": "Northern Securities Co. v. U.S., 193 U.S. 197 (1904)", "url": "https://supreme.justia.com/cases/federal/us/193/197/" }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Pure Food & Drug and Meat Inspection Acts",
+    "year": 1906,
+    "latitude": 38.9072,
+    "longitude": -77.0369,
+    "description": "Congress enacted consumer protection laws to regulate food and drug safety and meatpacking, responding to public outcry and muckraking exposés.",
+    "image": "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=400&h=300&fit=crop",
+    "modernConnection": "Foundation for the FDA and modern consumer protection regimes.",
+    "significance": 8,
+    "tags": ["regulation", "consumer"],
+    "sources": [
+      { "title": "U.S. FDA – Historical Highlights", "url": "https://www.fda.gov/" }
+    ]
   },
   {
     "id": 15,
@@ -87,11 +227,45 @@
     "year": 1908,
     "latitude": 42.3314,
     "longitude": -83.0458,
-    "description": "Ford began mass production of the Model T in Detroit, making automobiles affordable for ordinary Americans and transforming transportation forever.",
+    "description": "Ford began mass production of the Model T in Detroit, making automobiles affordable for ordinary Americans and transforming transportation and manufacturing.",
     "image": "https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=400&h=300&fit=crop",
-    "modernConnection": "The Model T's democratization of transportation mirrors how electric vehicles and autonomous driving technology are reshaping mobility and urban planning in the 21st century.",
+    "modernConnection": "Mass production techniques inform today’s automation, supply chains, and EV scaling.",
     "significance": 10,
-    "prominent": true
+    "prominent": true,
+    "tags": ["manufacturing", "automotive"],
+    "sources": [
+      { "title": "The Henry Ford – Model T", "url": "https://www.thehenryford.org/" }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Upton Sinclair’s The Jungle",
+    "year": 1906,
+    "latitude": 41.8781,
+    "longitude": -87.6298,
+    "description": "Publication of The Jungle exposed unsanitary conditions in meatpacking and labor exploitation, galvanizing public support for federal regulation.",
+    "image": "https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=400&h=300&fit=crop",
+    "modernConnection": "Illustrates the power of investigative journalism to drive policy change—echoed in modern consumer and workplace reporting.",
+    "significance": 7,
+    "tags": ["muckraking", "labor"],
+    "sources": [
+      { "title": "Upton Sinclair, The Jungle (1906)", "url": "https://www.gutenberg.org/ebooks/140" }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Hepburn Act",
+    "year": 1906,
+    "latitude": 38.9072,
+    "longitude": -77.0369,
+    "description": "The Hepburn Act strengthened the ICC’s power to set maximum railroad rates and extended its jurisdiction—deepening federal regulatory capacity.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=300&fit=crop",
+    "modernConnection": "Precedent for rate‑setting and oversight of network industries (e.g., telecom, utilities).",
+    "significance": 7,
+    "tags": ["regulation", "railroads"],
+    "sources": [
+      { "title": "Hepburn Act (1906) – Our Documents", "url": "https://www.ourdocuments.gov/" }
+    ]
   },
   {
     "id": 18,
@@ -99,11 +273,31 @@
     "year": 1913,
     "latitude": 38.9072,
     "longitude": -77.0369,
-    "description": "The Federal Reserve Act was signed in Washington D.C., creating America's central banking system to provide financial stability and regulate monetary policy.",
+    "description": "The Federal Reserve Act created America’s central banking system to provide financial stability and regulate monetary policy.",
     "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=300&fit=crop",
-    "modernConnection": "The Federal Reserve continues to play a crucial role in managing economic crises, inflation, and financial stability, as seen during the 2008 financial crisis and COVID-19 pandemic responses.",
+    "modernConnection": "The Fed remains central in crisis response and inflation control, evident in 2008 and COVID‑19 policy.",
     "significance": 9,
-    "prominent": true
+    "prominent": true,
+    "tags": ["finance", "regulation"],
+    "sources": [
+      { "title": "Federal Reserve Act (1913)", "url": "https://www.federalreservehistory.org/" }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Triangle Shirtwaist Factory Fire",
+    "year": 1911,
+    "latitude": 40.7295,
+    "longitude": -73.9965,
+    "description": "A factory fire in New York City killed 146 workers, spurring major workplace safety reforms and labor protections.",
+    "image": "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=400&h=300&fit=crop",
+    "modernConnection": "Catalyst for building codes and occupational safety; frames today’s supply‑chain and workplace standards.",
+    "significance": 9,
+    "prominent": true,
+    "tags": ["labor", "safety"],
+    "sources": [
+      { "title": "NYC Triangle Fire Archive", "url": "https://trianglefire.ilr.cornell.edu/" }
+    ]
   },
   {
     "id": 20,
@@ -111,10 +305,31 @@
     "year": 1914,
     "latitude": 38.9072,
     "longitude": -77.0369,
-    "description": "World War I began in Europe, initially with American neutrality, but eventually drawing the United States into global conflict and transforming America into a world power.",
+    "description": "World War I began in Europe; U.S. neutrality gave way to entry in 1917, cementing America’s global industrial and military capacity.",
     "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-    "modernConnection": "WWI established America's role in global conflicts and international diplomacy, setting precedents for modern military interventions and international cooperation through organizations like NATO and the UN.",
+    "modernConnection": "WWI accelerated federal coordination of industry and labor—templates for later mobilizations and today’s emergency economic policies.",
     "significance": 10,
-    "prominent": true
+    "prominent": true,
+    "tags": ["war", "industry"],
+    "sources": [
+      { "title": "American Yawp – World War I", "url": "https://www.americanyawp.com/" }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Standard Oil Breakup",
+    "year": 1911,
+    "latitude": 38.9072,
+    "longitude": -77.0369,
+    "description": "In Standard Oil Co. v. United States, the Supreme Court ordered the dissolution of Standard Oil under the Sherman Act.",
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+    "modernConnection": "Archetype of structural antitrust remedies, frequently cited in debates over breaking up dominant tech platforms.",
+    "significance": 9,
+    "prominent": true,
+    "tags": ["antitrust", "law"],
+    "sources": [
+      { "title": "Standard Oil Co. v. United States, 221 U.S. 1 (1911)", "url": "https://supreme.justia.com/cases/federal/us/221/1/" },
+      { "title": "Building the American Republic, Vol. 2", "author": "Dailey", "year": 2018 }
+    ]
   }
 ]

@@ -15,4 +15,12 @@ export interface Event {
   image: string;
   modernConnection: string;
   significance: number;
+  prominent?: boolean;
+  tags?: string[];
+  sources?: {
+    title: string;
+    author?: string;
+    year?: number;
+    url?: string;
+  }[];
 }

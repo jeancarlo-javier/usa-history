@@ -15,12 +15,16 @@ interface Event {
   image: string;
   modernConnection: string;
   significance: number;
+  prominent?: boolean;
+  tags?: string[];
+  sources?: { title: string; author?: string; year?: number; url?: string }[];
 }
 
 function App() {
   const [hoveredEvent, setHoveredEvent] = useState<Event | null>(null);
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
   const [openEvent, setOpenEvent] = useState<Event | null>(null);
+  const [showReferences, setShowReferences] = useState(false);
   const [viewState, setViewState] = useState({
     longitude: -95.7129,
     latitude: 37.0902,
@@ -86,20 +90,20 @@ function App() {
     }
   };
 
-  const openEventHandler = (event: Event) => {
-    setOpenEvent(event);
-  };
-
   const handleMapEventClick = (event: Event) => {
-    openEventHandler(event);
+    setOpenEvent(event);
   };
 
   const handleCloseModal = () => {
     setOpenEvent(null);
   };
 
-  const handleViewStateChange = ({ viewState }) => {
+  const handleViewStateChange = ({ viewState }: any) => {
     setViewState(viewState);
+  };
+
+  const openEventHandler = (event: Event) => {
+    setOpenEvent(event);
   };
 
   return (
@@ -112,6 +116,9 @@ function App() {
           </h1>
           <p className="text-lg text-amber-300">
             United States History: 1877-1914
+          </p>
+          <p className="mt-3 text-sm text-amber-200 max-w-3xl">
+            Thesis: Rapid industrialization and the rise of corporate power (1877–1914) transformed American life—driving urbanization and mass immigration—while provoking landmark government regulation and labor activism that still frame today’s debates over antitrust, worker protections, and consumer safety.
           </p>
         </div>
       </div>
@@ -127,17 +134,68 @@ function App() {
 
       {/* Timeline Component */}
       <Timeline
-        events={eventsData}
         onEventClick={handleTimelineEventClick}
         onEventHover={handleEventHover}
-        selectedEvent={selectedEvent}
         openEventHandler={openEventHandler}
+        selectedEvent={selectedEvent}
         minYear={minYear}
         maxYear={maxYear}
       />
 
       {/* Event Details Modal */}
       <EventModal event={openEvent} onClose={handleCloseModal} />
+
+      {/* References Floating Button */}
+      <button
+        onClick={() => setShowReferences(true)}
+        className="fixed top-8 right-8 z-20 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg border border-blue-300/40"
+      >
+        References
+      </button>
+
+      {/* References Modal */}
+      {showReferences && (
+        <div
+          className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setShowReferences(false);
+          }}
+        >
+          <div className="bg-white rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-2xl font-bold text-gray-900">References & Required Readings</h2>
+              <button
+                onClick={() => setShowReferences(false)}
+                className="text-gray-600 hover:text-gray-900"
+              >
+                Close
+              </button>
+            </div>
+            <div className="space-y-6 text-sm">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">Required Readings</h3>
+                <ul className="list-disc ml-6 space-y-1 text-gray-700">
+                  <li>Dailey, J. (2018). Building the American Republic, Vol. 2: A Narrative History from 1877. University of Chicago Press (pp. 1–73).</li>
+                  <li>Watson, H. (2018). Building the American Republic, Vol. 1: A Narrative History to 1877. University of Chicago Press.</li>
+                  <li>HistoriaUniversal.org (2023). La reconstrucción de los Estados Unidos: Los Estados Unidos en la posguerra.</li>
+                  <li>Aprende Historia (2023). La Revolución Industrial en EE. UU.: Impacto y Consecuencias.</li>
+                  <li>LibreTexts (Español). 19.4: Theodore Roosevelt y el imperialismo estadounidense.</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">Event Sources</h3>
+                <ul className="list-disc ml-6 space-y-2 text-gray-700">
+                  {Array.isArray(eventsData) && eventsData.flatMap((e: any) => (e.sources ?? [])).filter(Boolean).map((s: any, idx: number) => (
+                    <li key={idx}>
+                      {s.author ? `${s.author}. ` : ''}{s.title}{s.year ? ` (${s.year})` : ''}{s.url ? ` — ${s.url}` : ''}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
