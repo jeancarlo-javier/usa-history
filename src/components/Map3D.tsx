@@ -35,11 +35,21 @@ export default function Map3D({ onEventClick, viewState, onViewStateChange, sele
       opacity: 0.8,
       stroked: true,
       filled: true,
-      radiusScale: 6,
+      radiusScale: 8,
       radiusMinPixels: 5,
       radiusMaxPixels: 100,
       lineWidthMinPixels: 1,
       getPosition: (d: Event) => [d.longitude, d.latitude],
+      getRadius: (d: Event) => {
+        const baseRadius = d.significance;
+        if (selectedEvent && d.id === selectedEvent.id) {
+          return baseRadius * 2;
+        }
+        if (hoveredEvent && d.id === hoveredEvent.id) {
+          return baseRadius * 1.25;
+        }
+        return baseRadius;
+      },
       getFillColor: (d: Event) => {
         if (selectedEvent && d.id === selectedEvent.id) {
           return [255, 0, 0, 255];
@@ -50,10 +60,16 @@ export default function Map3D({ onEventClick, viewState, onViewStateChange, sele
         return [255, 140, 0, Math.round(255 * intensity)];
       },
       getLineColor: (d: Event) => {
-        if (selectedEvent && d.id === selectedEvent.id) {
+        if ((selectedEvent && d.id === selectedEvent.id) || (hoveredEvent && d.id === hoveredEvent.id)) {
           return [255, 255, 255];
         }
-        return [0, 0, 0];
+        return [0, 0, 0, 180];
+      },
+      getLineWidth: (d: Event) => {
+        if ((selectedEvent && d.id === selectedEvent.id) || (hoveredEvent && d.id === hoveredEvent.id)) {
+          return 2;
+        }
+        return 1;
       },
       onHover: (info: PickingInfo<Event>) => {
         if (info.object) {

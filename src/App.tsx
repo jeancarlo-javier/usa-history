@@ -31,14 +31,14 @@ function App() {
     transitionInterpolator: new FlyToInterpolator(),
   });
 
-  const minYear = Math.min(...eventsData.map(e => e.year));
-  const maxYear = Math.max(...eventsData.map(e => e.year));
+  const minYear = Math.min(...eventsData.map((e) => e.year));
+  const maxYear = Math.max(...eventsData.map((e) => e.year));
 
   const handleEventHover = (event: Event | null) => {
     if (event) {
       setHoveredEvent(event);
       if (!selectedEvent) {
-        setViewState(prev => ({
+        setViewState((prev) => ({
           ...prev,
           longitude: event.longitude,
           latitude: event.latitude,
@@ -50,7 +50,7 @@ function App() {
     } else {
       setHoveredEvent(null);
       if (!selectedEvent) {
-        setViewState(prev => ({
+        setViewState((prev) => ({
           ...prev,
           longitude: -95.7129,
           latitude: 37.0902,
@@ -65,7 +65,7 @@ function App() {
   const handleTimelineEventClick = (event: Event) => {
     if (selectedEvent && selectedEvent.id === event.id) {
       setSelectedEvent(null);
-      setViewState(prev => ({
+      setViewState((prev) => ({
         ...prev,
         longitude: -95.7129,
         latitude: 37.0902,
@@ -75,7 +75,7 @@ function App() {
       }));
     } else {
       setSelectedEvent(event);
-      setViewState(prev => ({
+      setViewState((prev) => ({
         ...prev,
         longitude: event.longitude,
         latitude: event.latitude,
@@ -86,8 +86,12 @@ function App() {
     }
   };
 
-  const handleMapEventClick = (event: Event) => {
+  const openEventHandler = (event: Event) => {
     setOpenEvent(event);
+  };
+
+  const handleMapEventClick = (event: Event) => {
+    openEventHandler(event);
   };
 
   const handleCloseModal = () => {
@@ -127,6 +131,7 @@ function App() {
         onEventClick={handleTimelineEventClick}
         onEventHover={handleEventHover}
         selectedEvent={selectedEvent}
+        openEventHandler={openEventHandler}
         minYear={minYear}
         maxYear={maxYear}
       />
