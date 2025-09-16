@@ -110,15 +110,19 @@ function App() {
     <div className="relative w-full h-screen overflow-hidden">
       {/* Main Title Overlay */}
       <div className="fixed top-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="bg-amber-900/80 backdrop-blur-sm rounded-lg px-8 py-4 border border-amber-600/30 text-center shadow-2xl">
+        <div className="bg-gradient-to-b from-black/90 to-gray-900/80 border border-amber-600/30 rounded-xl px-8 py-6 text-center shadow-2xl backdrop-blur-sm">
           <h1 className="text-4xl font-bold text-amber-100 mb-2">
             Industrialization and Economic Transformation
           </h1>
-          <p className="text-lg text-amber-300">
+          <p className="text-lg text-gray-300">
             United States History: 1877-1914
           </p>
-          <p className="mt-3 text-sm text-amber-200 max-w-3xl">
-            Thesis: Rapid industrialization and the rise of corporate power (1877–1914) transformed American life—driving urbanization and mass immigration—while provoking landmark government regulation and labor activism that still frame today’s debates over antitrust, worker protections, and consumer safety.
+          <p className="mt-3 text-sm text-gray-300 max-w-3xl leading-relaxed">
+            Thesis: Rapid industrialization and the rise of corporate power
+            (1877–1914) transformed American life—driving urbanization and mass
+            immigration—while provoking landmark government regulation and labor
+            activism that still frame today's debates over antitrust, worker
+            protections, and consumer safety.
           </p>
         </div>
       </div>
@@ -163,7 +167,9 @@ function App() {
         >
           <div className="bg-white rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl p-6">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-2xl font-bold text-gray-900">References & Required Readings</h2>
+              <h2 className="text-2xl font-bold text-gray-900">
+                References & Required Readings
+              </h2>
               <button
                 onClick={() => setShowReferences(false)}
                 className="text-gray-600 hover:text-gray-900"
@@ -173,23 +179,50 @@ function App() {
             </div>
             <div className="space-y-6 text-sm">
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">Required Readings</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  Required Readings
+                </h3>
                 <ul className="list-disc ml-6 space-y-1 text-gray-700">
-                  <li>Dailey, J. (2018). Building the American Republic, Vol. 2: A Narrative History from 1877. University of Chicago Press (pp. 1–73).</li>
-                  <li>Watson, H. (2018). Building the American Republic, Vol. 1: A Narrative History to 1877. University of Chicago Press.</li>
-                  <li>HistoriaUniversal.org (2023). La reconstrucción de los Estados Unidos: Los Estados Unidos en la posguerra.</li>
-                  <li>Aprende Historia (2023). La Revolución Industrial en EE. UU.: Impacto y Consecuencias.</li>
-                  <li>LibreTexts (Español). 19.4: Theodore Roosevelt y el imperialismo estadounidense.</li>
+                  <li>
+                    Dailey, J. (2018). Building the American Republic, Vol. 2: A
+                    Narrative History from 1877. University of Chicago Press
+                    (pp. 1–73).
+                  </li>
+                  <li>
+                    Watson, H. (2018). Building the American Republic, Vol. 1: A
+                    Narrative History to 1877. University of Chicago Press.
+                  </li>
+                  <li>
+                    HistoriaUniversal.org (2023). La reconstrucción de los
+                    Estados Unidos: Los Estados Unidos en la posguerra.
+                  </li>
+                  <li>
+                    Aprende Historia (2023). La Revolución Industrial en EE.
+                    UU.: Impacto y Consecuencias.
+                  </li>
+                  <li>
+                    LibreTexts (Español). 19.4: Theodore Roosevelt y el
+                    imperialismo estadounidense.
+                  </li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">Event Sources</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  Event Sources
+                </h3>
                 <ul className="list-disc ml-6 space-y-2 text-gray-700">
-                  {Array.isArray(eventsData) && eventsData.flatMap((e: any) => (e.sources ?? [])).filter(Boolean).map((s: any, idx: number) => (
-                    <li key={idx}>
-                      {s.author ? `${s.author}. ` : ''}{s.title}{s.year ? ` (${s.year})` : ''}{s.url ? ` — ${s.url}` : ''}
-                    </li>
-                  ))}
+                  {Array.isArray(eventsData) &&
+                    eventsData
+                      .flatMap((e: any) => e.sources ?? [])
+                      .filter(Boolean)
+                      .map((s: any, idx: number) => (
+                        <li key={idx}>
+                          {s.author ? `${s.author}. ` : ""}
+                          {s.title}
+                          {s.year ? ` (${s.year})` : ""}
+                          {s.url ? ` — ${s.url}` : ""}
+                        </li>
+                      ))}
                 </ul>
               </div>
             </div>

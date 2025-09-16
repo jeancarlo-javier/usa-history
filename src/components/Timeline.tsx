@@ -41,22 +41,15 @@ export default function Timeline({
 
   // Measure the timeline track to compute pixel-accurate positions and anti-overlap lanes
   const trackContainerRef = React.useRef<HTMLDivElement | null>(null);
-  const [trackMetrics, setTrackMetrics] = React.useState({
-    width: 0,
-    padLeft: 0,
-    padRight: 0,
-  });
+  const [trackMetrics, setTrackMetrics] = React.useState({ width: 0 });
 
   React.useLayoutEffect(() => {
     const el = trackContainerRef.current;
     if (!el) return;
 
     const update = () => {
-      const style = getComputedStyle(el);
-      const padLeft = parseFloat(style.paddingLeft || "0");
-      const padRight = parseFloat(style.paddingRight || "0");
-      const width = el.clientWidth - padLeft - padRight;
-      setTrackMetrics({ width: Math.max(0, width), padLeft, padRight });
+      const width = el.clientWidth; // padding-box width to match absolute inset-0 track
+      setTrackMetrics({ width: Math.max(0, width) });
     };
 
     update();
@@ -76,10 +69,11 @@ export default function Timeline({
     const minPxSpacing = 22; // minimum horizontal spacing between events in same lane
 
     // Map event -> x position in pixels within the track
-    const withX = eventsData.map((e) => ({
-      event: e,
-      xPx: ((e.year - minYear) / Math.max(1, maxYear - minYear)) * width,
-    }));
+    const withX = eventsData.map((e) => {
+      const ratio = (e.year - minYear) / Math.max(1, maxYear - minYear);
+      const x = ratio * width;
+      return { event: e, xPx: Math.min(width, Math.max(0, x)) };
+    });
 
     // Sort by x to lay out left-to-right
     withX.sort((a, b) => a.xPx - b.xPx);
@@ -104,28 +98,33 @@ export default function Timeline({
     return result;
   }, [minYear, maxYear, trackMetrics.width]);
 
-  // Convert lane index to vertical offset around center: 0 -> 0, 1 -> -1, 2 -> +1, 3 -> -2, ...
-  const laneIndexToSignedLevel = (lane: number) => {
-    if (lane === 0) return 0;
-    const k = Math.ceil(lane / 2);
-    return lane % 2 === 1 ? -k : k;
-  };
+  // Timeline baseline anchored from the bottom; points and cards rise above it
+  const BASELINE_OFFSET_PX = 32; // ~ Tailwind bottom-8 (2rem)
+  const POINT_ABOVE_LINE_PX = 8; // non-zero only for lanes above the baseline
+  const DOT_SIZE_PX = 16; // Tailwind w-4 h-4
+  const DOT_RADIUS_PX = DOT_SIZE_PX / 2;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/90 to-transparent text-white shadow-2xl">
+    <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/80 to-transparent backdrop-blur-sm text-white shadow-2xl border-t border-amber-600/20">
       <div className="px-6 py-8">
         {/* Timeline Container */}
         <div ref={trackContainerRef} className="relative px-8 py-16">
-          {/* Horizontal Timeline Line with gradient */}
-          <div className="absolute top-1/2 left-8 right-8 h-0.5 bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600 transform -translate-y-1/2 z-10 shadow-lg"></div>
+          {/* Horizontal Timeline Line with gradient (bottom aligned) */}
+          <div
+            className="absolute left-0 right-0 h-0.5 bg-gradient-to-r from-amber-600/80 via-amber-400 to-amber-600/80 z-10 shadow-lg shadow-amber-400/20"
+            style={{ bottom: BASELINE_OFFSET_PX }}
+          ></div>
 
           {/* Year markers */}
-          <div className="absolute top-1/2 left-8 right-8 transform -translate-y-1/2 z-5">
+          <div
+            className="absolute left-0 right-0 z-5"
+            style={{ bottom: Math.max(0, BASELINE_OFFSET_PX - 16) }}
+          >
             {[minYear, Math.floor((minYear + maxYear) / 2), maxYear].map(
               (year, idx) => (
                 <div
                   key={year}
-                  className="absolute text-xs text-gray-400 -bottom-8"
+                  className="absolute text-xs text-gray-300 font-medium bg-black/40 backdrop-blur-sm px-2 py-1 rounded border border-amber-600/20"
                   style={{
                     left: `${idx * 50}%`,
                     transform: "translateX(-50%)",
@@ -137,14 +136,17 @@ export default function Timeline({
             )}
           </div>
 
-          {/* Events Container */}
-          <div className="relative">
+          {/* Events Container fills positioned parent for consistent coordinates */}
+          <div className="absolute inset-0">
             {/* Timeline Events with lane-based anti-overlap */}
             {laidOutEvents.map(({ event, xPx, lane }) => {
-              const signedLevel = laneIndexToSignedLevel(lane);
-              const laneGapPx = 28; // vertical distance between lanes
-              const topOffsetPx = signedLevel * laneGapPx;
-              const isAbove = signedLevel < 0; // place labels accordingly
+              const laneGapPx = 20; // vertical distance between stacked lanes
+              // Lane 0: center the dot on the line (its center matches baseline)
+              // Lanes >=1: place dots above the line with a small offset, stacked bottom-to-top
+              const bottomOffsetPx =
+                lane === 0
+                  ? BASELINE_OFFSET_PX - DOT_RADIUS_PX
+                  : BASELINE_OFFSET_PX + POINT_ABOVE_LINE_PX + (lane - 1) * laneGapPx;
               const isMostImportant = !!event.prominent;
               const isImportant = !isMostImportant && event.significance >= 9;
 
@@ -156,7 +158,7 @@ export default function Timeline({
                   }`}
                   style={{
                     left: `${xPx}px`,
-                    top: `calc(50% + ${topOffsetPx}px)`,
+                    bottom: `${bottomOffsetPx}px`,
                     transform: "translateX(-50%)",
                   }}
                   onMouseEnter={() => onEventHover(event)}
@@ -172,25 +174,15 @@ export default function Timeline({
 
                   {/* Event Name (floating tooltip or permanent) */}
                   {isMostImportant ? (
-                    <div
-                      className={`absolute left-1/2 -translate-x-1/2 text-center transition-all duration-300 group-hover:scale-105 ${
-                        isAbove ? "-top-24" : "top-full mt-4"
-                      }`}
-                    >
-                      {/* Connector line for prominent events */}
-                      <div
-                        className={`absolute left-1/2 -translate-x-1/2 w-px bg-amber-400/50 ${
-                          isAbove
-                            ? "top-full h-4"
-                            : "top-0 -translate-y-full h-4"
-                        }`}
-                      ></div>
+                    <div className="absolute left-1/2 -translate-x-1/2 text-center transition-all duration-300 group-hover:scale-105 bottom-full mb-4">
+                      {/* Connector line for prominent events (downward from card to dot) */}
+                      <div className="absolute left-1/2 -translate-x-1/2 w-px bg-amber-400/50 bottom-0 translate-y-full h-4"></div>
 
-                      <div className="bg-amber-900/80 backdrop-blur-sm rounded-lg px-3 py-2 border border-amber-600/30">
+                      <div className="bg-gradient-to-b from-black/90 to-gray-900/90 backdrop-blur-sm rounded-xl px-4 py-3 border border-amber-600/30 shadow-xl">
                         <div className="text-sm font-bold text-amber-100 whitespace-nowrap">
                           {event.title}
                         </div>
-                        <div className="text-xs text-amber-300 whitespace-nowrap font-medium">
+                        <div className="text-xs text-gray-300 whitespace-nowrap font-medium">
                           {event.year}
                         </div>
                         <button
@@ -202,29 +194,17 @@ export default function Timeline({
                       </div>
                     </div>
                   ) : (
-                    <div
-                      className={`absolute ${
-                        isAbove ? "bottom-full mb-3" : "top-full mt-3"
-                      } left-1/2 -translate-x-1/2 w-max px-3 py-2 bg-gray-900/95 backdrop-blur-sm text-white text-xs rounded-lg border border-gray-700 opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-xl z-50`}
-                    >
-                      <div className="font-semibold">{event.title}</div>
+                    <div className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 w-max px-3 py-2 bg-gradient-to-b from-black/95 to-gray-900/95 backdrop-blur-sm text-white text-xs rounded-xl border border-amber-600/30 opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-xl z-50">
+                      <div className="font-semibold text-amber-100">{event.title}</div>
                       <div className="text-gray-300">{event.year}</div>
                       <button
                         onClick={() => openEventClick(event)}
-                        className="text-blue-400 hover:underline mt-1 text-xs"
+                        className="text-amber-400 hover:text-amber-200 transition-colors duration-200 mt-1 text-xs"
                       >
                         Read More
                       </button>
                       {/* Tooltip arrow */}
-                      <div
-                        className={`absolute ${
-                          isAbove ? "top-full" : "bottom-full"
-                        } left-1/2 -translate-x-1/2 border-l-4 border-r-4 border-t-4 border-b-4 border-transparent ${
-                          isAbove
-                            ? "border-t-gray-900/95"
-                            : "border-b-gray-900/95"
-                        }`}
-                      ></div>
+                      <div className="absolute top-full left-1/2 -translate-x-1/2 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/95"></div>
                     </div>
                   )}
 
@@ -240,10 +220,10 @@ export default function Timeline({
                         selectedEvent?.id === event.id
                           ? "border-white bg-red-500 shadow-red-500/50"
                           : isMostImportant
-                            ? "border-amber-300 bg-amber-500 shadow-amber-500/30 group-hover:bg-amber-400"
-                            : isImportant
-                              ? "border-amber-200 bg-amber-400 shadow-amber-400/30 group-hover:bg-amber-300"
-                              : "border-gray-400 bg-gray-600 shadow-gray-600/30 group-hover:bg-gray-500"
+                          ? "border-amber-300 bg-amber-500 shadow-amber-500/30 group-hover:bg-amber-400"
+                          : isImportant
+                          ? "border-amber-200 bg-amber-400 shadow-amber-400/30 group-hover:bg-amber-300"
+                          : "border-gray-400 bg-gray-600 shadow-gray-600/30 group-hover:bg-gray-500"
                       }`}
                       onClick={() => handleEventClick(event)}
                     >
@@ -256,13 +236,6 @@ export default function Timeline({
                 </div>
               );
             })}
-          </div>
-        </div>
-
-        {/* Timeline title */}
-        <div className="text-center pb-4">
-          <div className="text-sm text-gray-400 font-medium">
-            US Industrialization Timeline • {minYear} - {maxYear}
           </div>
         </div>
       </div>

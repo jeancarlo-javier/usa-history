@@ -11,8 +11,15 @@
     "significance": 8,
     "tags": ["labor", "railroads"],
     "sources": [
-      { "title": "Building the American Republic, Vol. 2", "author": "Dailey", "year": 2018 },
-      { "title": "Library of Congress: The Great Railroad Strike of 1877", "url": "https://www.loc.gov/" }
+      {
+        "title": "Building the American Republic, Vol. 2",
+        "author": "Dailey",
+        "year": 2018
+      },
+      {
+        "title": "Library of Congress: The Great Railroad Strike of 1877",
+        "url": "https://www.loc.gov/"
+      }
     ]
   },
   {
@@ -25,10 +32,18 @@
     "image": "https://images.unsplash.com/photo-1606838132738-aa7c2513d376?w=400&h=300&fit=crop",
     "modernConnection": "Edison's research model and infrastructure buildout prefigure modern R&D ecosystems and platform technologies.",
     "significance": 10,
+    "prominent": true,
     "tags": ["technology", "electricity"],
     "sources": [
-      { "title": "Edison’s Patent (U.S. 223,898)", "url": "https://patents.google.com/patent/US223898A" },
-      { "title": "Building the American Republic, Vol. 2", "author": "Dailey", "year": 2018 }
+      {
+        "title": "Edison’s Patent (U.S. 223,898)",
+        "url": "https://patents.google.com/patent/US223898A"
+      },
+      {
+        "title": "Building the American Republic, Vol. 2",
+        "author": "Dailey",
+        "year": 2018
+      }
     ]
   },
   {
@@ -41,10 +56,18 @@
     "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
     "modernConnection": "Standard Oil’s consolidation catalyzed antitrust law—paralleling today’s concerns about platform dominance in big tech.",
     "significance": 9,
+    "prominent": true,
     "tags": ["antitrust", "corporate"],
     "sources": [
-      { "title": "Sherman Antitrust Act (1890)", "url": "https://www.ourdocuments.gov/" },
-      { "title": "Building the American Republic, Vol. 2", "author": "Dailey", "year": 2018 }
+      {
+        "title": "Sherman Antitrust Act (1890)",
+        "url": "https://www.ourdocuments.gov/"
+      },
+      {
+        "title": "Building the American Republic, Vol. 2",
+        "author": "Dailey",
+        "year": 2018
+      }
     ]
   },
   {
@@ -59,8 +82,15 @@
     "significance": 8,
     "tags": ["regulation", "railroads"],
     "sources": [
-      { "title": "Interstate Commerce Act (1887)", "url": "https://www.archives.gov/milestone-documents" },
-      { "title": "Building the American Republic, Vol. 2", "author": "Dailey", "year": 2018 }
+      {
+        "title": "Interstate Commerce Act (1887)",
+        "url": "https://www.archives.gov/milestone-documents"
+      },
+      {
+        "title": "Building the American Republic, Vol. 2",
+        "author": "Dailey",
+        "year": 2018
+      }
     ]
   },
   {
@@ -75,8 +105,15 @@
     "significance": 8,
     "tags": ["labor", "protest"],
     "sources": [
-      { "title": "Chicago Historical Society: Haymarket Affair", "url": "https://www.chicagohistory.org/" },
-      { "title": "Building the American Republic, Vol. 2", "author": "Dailey", "year": 2018 }
+      {
+        "title": "Chicago Historical Society: Haymarket Affair",
+        "url": "https://www.chicagohistory.org/"
+      },
+      {
+        "title": "Building the American Republic, Vol. 2",
+        "author": "Dailey",
+        "year": 2018
+      }
     ]
   },
   {
@@ -91,7 +128,10 @@
     "significance": 8,
     "tags": ["labor", "steel"],
     "sources": [
-      { "title": "Homestead Strike – Encyclopedia of U.S. Labor", "url": "https://www.britannica.com/event/Homestead-Strike" }
+      {
+        "title": "Homestead Strike – Encyclopedia of U.S. Labor",
+        "url": "https://www.britannica.com/event/Homestead-Strike"
+      }
     ]
   },
   {
@@ -107,7 +147,10 @@
     "prominent": true,
     "tags": ["antitrust", "law"],
     "sources": [
-      { "title": "Sherman Antitrust Act (1890)", "url": "https://www.ourdocuments.gov/" }
+      {
+        "title": "Sherman Antitrust Act (1890)",
+        "url": "https://www.ourdocuments.gov/"
+      }
     ]
   },
   {
@@ -122,7 +165,10 @@
     "significance": 7,
     "tags": ["immigration", "urbanization"],
     "sources": [
-      { "title": "Statue of Liberty – Ellis Island Foundation", "url": "https://www.libertyellisfoundation.org/" }
+      {
+        "title": "Statue of Liberty – Ellis Island Foundation",
+        "url": "https://www.libertyellisfoundation.org/"
+      }
     ]
   },
   {
@@ -137,7 +183,10 @@
     "significance": 8,
     "tags": ["finance", "crisis"],
     "sources": [
-      { "title": "Federal Reserve Education: Panics of the 19th Century", "url": "https://www.federalreserveeducation.org/" }
+      {
+        "title": "Federal Reserve Education: Panics of the 19th Century",
+        "url": "https://www.federalreserveeducation.org/"
+      }
     ]
   },
   {
@@ -152,7 +201,10 @@
     "significance": 8,
     "tags": ["labor", "railroads"],
     "sources": [
-      { "title": "Debs v. United States (1919) context", "url": "https://supreme.justia.com/" }
+      {
+        "title": "Debs v. United States (1919) context",
+        "url": "https://supreme.justia.com/"
+      }
     ]
   },
   {
@@ -167,7 +219,10 @@
     "significance": 9,
     "tags": ["corporate", "steel"],
     "sources": [
-      { "title": "U.S. Steel – Company History", "url": "https://www.ussteel.com/" }
+      {
+        "title": "U.S. Steel – Company History",
+        "url": "https://www.ussteel.com/"
+      }
     ]
   },
   {
@@ -182,7 +237,10 @@
     "significance": 10,
     "tags": ["technology", "aviation"],
     "sources": [
-      { "title": "Wright Brothers Papers – Library of Congress", "url": "https://www.loc.gov/collections/wright-brothers-papers/" }
+      {
+        "title": "Wright Brothers Papers – Library of Congress",
+        "url": "https://www.loc.gov/collections/wright-brothers-papers/"
+      }
     ]
   },
   {
@@ -197,7 +255,10 @@
     "significance": 8,
     "tags": ["antitrust", "law"],
     "sources": [
-      { "title": "Northern Securities Co. v. U.S., 193 U.S. 197 (1904)", "url": "https://supreme.justia.com/cases/federal/us/193/197/" }
+      {
+        "title": "Northern Securities Co. v. U.S., 193 U.S. 197 (1904)",
+        "url": "https://supreme.justia.com/cases/federal/us/193/197/"
+      }
     ]
   },
   {
@@ -212,7 +273,10 @@
     "significance": 8,
     "tags": ["regulation", "consumer"],
     "sources": [
-      { "title": "U.S. FDA – Historical Highlights", "url": "https://www.fda.gov/" }
+      {
+        "title": "U.S. FDA – Historical Highlights",
+        "url": "https://www.fda.gov/"
+      }
     ]
   },
   {
@@ -228,7 +292,10 @@
     "prominent": true,
     "tags": ["manufacturing", "automotive"],
     "sources": [
-      { "title": "The Henry Ford – Model T", "url": "https://www.thehenryford.org/" }
+      {
+        "title": "The Henry Ford – Model T",
+        "url": "https://www.thehenryford.org/"
+      }
     ]
   },
   {
@@ -243,7 +310,10 @@
     "significance": 7,
     "tags": ["muckraking", "labor"],
     "sources": [
-      { "title": "Upton Sinclair, The Jungle (1906)", "url": "https://www.gutenberg.org/ebooks/140" }
+      {
+        "title": "Upton Sinclair, The Jungle (1906)",
+        "url": "https://www.gutenberg.org/ebooks/140"
+      }
     ]
   },
   {
@@ -258,7 +328,10 @@
     "significance": 7,
     "tags": ["regulation", "railroads"],
     "sources": [
-      { "title": "Hepburn Act (1906) – Our Documents", "url": "https://www.ourdocuments.gov/" }
+      {
+        "title": "Hepburn Act (1906) – Our Documents",
+        "url": "https://www.ourdocuments.gov/"
+      }
     ]
   },
   {
@@ -274,7 +347,10 @@
     "prominent": true,
     "tags": ["finance", "regulation"],
     "sources": [
-      { "title": "Federal Reserve Act (1913)", "url": "https://www.federalreservehistory.org/" }
+      {
+        "title": "Federal Reserve Act (1913)",
+        "url": "https://www.federalreservehistory.org/"
+      }
     ]
   },
   {
@@ -290,7 +366,10 @@
     "prominent": true,
     "tags": ["labor", "safety"],
     "sources": [
-      { "title": "NYC Triangle Fire Archive", "url": "https://trianglefire.ilr.cornell.edu/" }
+      {
+        "title": "NYC Triangle Fire Archive",
+        "url": "https://trianglefire.ilr.cornell.edu/"
+      }
     ]
   },
   {
@@ -305,7 +384,10 @@
     "significance": 10,
     "tags": ["war", "industry"],
     "sources": [
-      { "title": "American Yawp – World War I", "url": "https://www.americanyawp.com/" }
+      {
+        "title": "American Yawp – World War I",
+        "url": "https://www.americanyawp.com/"
+      }
     ]
   },
   {
@@ -321,8 +403,15 @@
     "prominent": true,
     "tags": ["antitrust", "law"],
     "sources": [
-      { "title": "Standard Oil Co. v. United States, 221 U.S. 1 (1911)", "url": "https://supreme.justia.com/cases/federal/us/221/1/" },
-      { "title": "Building the American Republic, Vol. 2", "author": "Dailey", "year": 2018 }
+      {
+        "title": "Standard Oil Co. v. United States, 221 U.S. 1 (1911)",
+        "url": "https://supreme.justia.com/cases/federal/us/221/1/"
+      },
+      {
+        "title": "Building the American Republic, Vol. 2",
+        "author": "Dailey",
+        "year": 2018
+      }
     ]
   }
 ]
