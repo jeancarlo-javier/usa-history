@@ -2,28 +2,13 @@ import { useState } from "react";
 import { FlyToInterpolator } from "deck.gl";
 import Map3D from "./components/Map3D";
 import Timeline from "./components/Timeline";
-import EventModal from "./components/EventModal";
 import eventsData from "./events.json";
-
-interface Event {
-  id: number;
-  title: string;
-  year: number;
-  latitude: number;
-  longitude: number;
-  description: string;
-  image: string;
-  modernConnection: string;
-  significance: number;
-  prominent?: boolean;
-  tags?: string[];
-  sources?: { title: string; author?: string; year?: number; url?: string }[];
-}
+import type { Event } from "./types";
+import Header from "./components/Header";
 
 function App() {
   const [hoveredEvent, setHoveredEvent] = useState<Event | null>(null);
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
-  const [openEvent, setOpenEvent] = useState<Event | null>(null);
   const [showReferences, setShowReferences] = useState(false);
   const [viewState, setViewState] = useState({
     longitude: -95.7129,
@@ -91,11 +76,11 @@ function App() {
   };
 
   const handleMapEventClick = (event: Event) => {
-    setOpenEvent(event);
+    setSelectedEvent(event);
   };
 
-  const handleCloseModal = () => {
-    setOpenEvent(null);
+  const handleUnpinEvent = () => {
+    setSelectedEvent(null);
   };
 
   const handleViewStateChange = ({ viewState }: any) => {
@@ -103,30 +88,12 @@ function App() {
   };
 
   const openEventHandler = (event: Event) => {
-    setOpenEvent(event);
+    setSelectedEvent(event);
   };
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      {/* Main Title Overlay */}
-      <div className="fixed top-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="bg-gradient-to-b from-black/90 to-gray-900/80 border border-amber-600/30 rounded-xl px-8 py-6 text-center shadow-2xl backdrop-blur-sm">
-          <h1 className="text-4xl font-bold text-amber-100 mb-2">
-            Industrialización y Transformación Económica
-          </h1>
-          <p className="text-lg text-gray-300">
-            Historia de Estados Unidos: 1877-1914
-          </p>
-          <p className="mt-3 text-sm text-gray-300 max-w-3xl leading-relaxed">
-            Tesis: La rápida industrialización y el ascenso del poder
-            corporativo (1877–1914) transformaron la vida
-            estadounidense—impulsando la urbanización y la inmigración
-            masiva—mientras provocaban regulaciones gubernamentales emblemáticas
-            y activismo laboral que aún enmarcan los debates actuales sobre
-            antimonopolio, protecciones laborales y seguridad del consumidor.
-          </p>
-        </div>
-      </div>
+      <Header pinnedEvent={selectedEvent} onUnpin={handleUnpinEvent} />
 
       {/* 3D Map Background */}
       <Map3D
@@ -147,9 +114,6 @@ function App() {
         maxYear={maxYear}
       />
 
-      {/* Event Details Modal */}
-      <EventModal event={openEvent} onClose={handleCloseModal} />
-
       {/* References Floating Button */}
       <button
         onClick={() => setShowReferences(true)}
@@ -169,7 +133,7 @@ function App() {
           <div className="bg-white rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl p-6">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-2xl font-bold text-gray-900">
-                Referencias y Lecturas Requeridas
+                Referencias y Lecturas
               </h2>
               <button
                 onClick={() => setShowReferences(false)}
@@ -181,7 +145,7 @@ function App() {
             <div className="space-y-6 text-sm">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  Lecturas Requeridas
+                  Lecturas
                 </h3>
                 <ul className="list-disc ml-6 space-y-1 text-gray-700">
                   <li>
@@ -213,9 +177,15 @@ function App() {
                 </h3>
                 <ul className="list-disc ml-6 space-y-2 text-gray-700">
                   {Array.isArray(eventsData) &&
-                    eventsData
-                      .flatMap((e: any) => e.sources ?? [])
-                      .filter(Boolean)
+                    Array.from(
+                      new Set(
+                        eventsData
+                          .flatMap((e: any) => e.sources ?? [])
+                          .filter(Boolean)
+                          .map((s: any) => JSON.stringify(s))
+                      )
+                    )
+                      .map((s: any) => JSON.parse(s))
                       .map((s: any, idx: number) => (
                         <li key={idx}>
                           {s.author ? `${s.author}. ` : ""}

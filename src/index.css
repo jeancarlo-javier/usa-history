@@ -8,3 +8,42 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Header transitions */
+.header-enter {
+  opacity: 0;
+  transform: translateX(-50%) scale(0.95) translateY(-10px);
+}
+.header-enter-active {
+  opacity: 1;
+  transform: translateX(-50%) scale(1) translateY(0);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+.header-exit {
+  opacity: 1;
+  transform: translateX(-50%) scale(1) translateY(0);
+}
+.header-exit-active {
+  opacity: 0;
+  transform: translateX(-50%) scale(0.95) translateY(-10px);
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+
+.event-detail-enter {
+  opacity: 0;
+  transform: translateX(-50%) scale(0.95) translateY(10px);
+}
+.event-detail-enter-active {
+  opacity: 1;
+  transform: translateX(-50%) scale(1) translateY(0);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+.event-detail-exit {
+  opacity: 1;
+  transform: translateX(-50%) scale(1) translateY(0);
+}
+.event-detail-exit-active {
+  opacity: 0;
+  transform: translateX(-50%) scale(0.95) translateY(10px);
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
