@@ -1,3 +1,5 @@
+/// <reference types="vite/client" />
+
 import DeckGL from "@deck.gl/react";
 import { IconLayer } from "@deck.gl/layers";
 import MapGL from "react-map-gl/mapbox";

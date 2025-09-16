@@ -1,4 +1,4 @@
-import React from "react";
+
 import type { Event } from "../types";
 import { CSSTransition } from "react-transition-group";
 
