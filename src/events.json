@@ -1,44 +1,36 @@
 [
   {
     "id": 1,
-    "title": "Great Railroad Strike",
+    "title": "Gran Huelga Ferroviaria",
     "year": 1877,
     "latitude": 39.2904,
     "longitude": -76.6122,
-    "description": "The Great Railroad Strike of 1877 began in Baltimore and spread nationwide, marking the first major labor uprising in American history. Workers protested wage cuts amid economic depression, leading to federal troops being deployed to restore order.",
-    "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&h=300&fit=crop",
-    "modernConnection": "This strike set precedents for federal intervention in labor disputes and highlighted tensions between workers and corporations that persist in today’s union organizing and gig‑economy debates.",
+    "description": "La primera gran insurrección obrera en la historia de EE.UU. Inició por recortes salariales en medio de una depresión económica y paralizó el comercio nacional. La violenta respuesta y el uso de tropas federales sentaron un precedente en los conflictos entre capital y trabajo.",
+    "image": "/images/gran-huelga-ferroviaria-1877.jpg",
+    "modernConnection": "Marcó el inicio de la intervención federal en disputas laborales, una tensión que persiste en los debates actuales sobre el derecho a la huelga, la sindicalización y la economía 'gig'.",
     "significance": 8,
-    "tags": ["labor", "railroads"],
+    "tags": ["laboral", "ferrocarriles", "conflicto"],
     "sources": [
       {
         "title": "Building the American Republic, Vol. 2",
         "author": "Dailey",
         "year": 2018
-      },
-      {
-        "title": "Library of Congress: The Great Railroad Strike of 1877",
-        "url": "https://www.loc.gov/"
       }
     ]
   },
   {
     "id": 2,
-    "title": "Edison's Electric Light Bulb Patent",
+    "title": "Patente de la Bombilla Eléctrica de Edison",
     "year": 1879,
     "latitude": 40.7589,
     "longitude": -74.4014,
-    "description": "Thomas Edison received his patent for the incandescent light bulb in Menlo Park, New Jersey, revolutionizing lighting and laying the foundation for the electrical industry.",
-    "image": "https://images.unsplash.com/photo-1606838132738-aa7c2513d376?w=400&h=300&fit=crop",
-    "modernConnection": "Edison's research model and infrastructure buildout prefigure modern R&D ecosystems and platform technologies.",
+    "description": "Thomas Edison patentó una bombilla incandescente comercialmente viable, catalizando la electrificación de las ciudades y las fábricas. Este avance tecnológico permitió extender la jornada laboral y transformó la vida nocturna y la producción industrial.",
+    "image": "/images/patente-bombilla-electrica-de-edison-1879.jpeg",
+    "modernConnection": "El modelo de 'fábrica de inventos' de Edison en Menlo Park es el precursor de los modernos laboratorios de I+D corporativos. La electrificación prefigura la construcción de infraestructuras de red como la de internet.",
     "significance": 10,
     "prominent": true,
-    "tags": ["technology", "electricity"],
+    "tags": ["tecnología", "innovación", "electricidad"],
     "sources": [
-      {
-        "title": "Edison’s Patent (U.S. 223,898)",
-        "url": "https://patents.google.com/patent/US223898A"
-      },
       {
         "title": "Building the American Republic, Vol. 2",
         "author": "Dailey",
@@ -48,21 +40,17 @@
   },
   {
     "id": 3,
-    "title": "Standard Oil Trust Formation",
+    "title": "Formación del Trust Standard Oil",
     "year": 1882,
     "latitude": 41.4993,
     "longitude": -81.6944,
-    "description": "John D. Rockefeller formed the Standard Oil Trust in Cleveland, creating a dominant monopoly that controlled most U.S. oil refining.",
-    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-    "modernConnection": "Standard Oil’s consolidation catalyzed antitrust law—paralleling today’s concerns about platform dominance in big tech.",
-    "significance": 9,
+    "description": "John D. Rockefeller consolidó su dominio sobre la industria petrolera creando el Standard Oil Trust, un modelo de monopolio que llegó a controlar cerca del 90% del refino en EE.UU. mediante tácticas agresivas de negocio y una eficiencia implacable.",
+    "image": "/images/formacion-del-trust-standard-oil-1882.jpg",
+    "modernConnection": "El poder del Standard Oil fue el principal catalizador para la creación de leyes antimonopolio. El debate sobre su poder es el arquetipo de las discusiones actuales sobre la dominancia de mercado de las gigantes tecnológicas (Big Tech).",
+    "significance": 10,
     "prominent": true,
-    "tags": ["antitrust", "corporate"],
+    "tags": ["monopolio", "corporativo", "petróleo"],
     "sources": [
-      {
-        "title": "Sherman Antitrust Act (1890)",
-        "url": "https://www.ourdocuments.gov/"
-      },
       {
         "title": "Building the American Republic, Vol. 2",
         "author": "Dailey",
@@ -72,20 +60,16 @@
   },
   {
     "id": 4,
-    "title": "Interstate Commerce Act",
+    "title": "Ley de Comercio Interestatal",
     "year": 1887,
     "latitude": 38.9072,
     "longitude": -77.0369,
-    "description": "Congress created the Interstate Commerce Commission to regulate railroad rates and curb unfair practices—an early federal step toward regulating big business.",
-    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=300&fit=crop",
-    "modernConnection": "Establishes a template for sector‑specific regulation and independent commissions used throughout the 20th century and today.",
+    "description": "Primera ley federal significativa para regular la empresa privada. Creó la Comisión de Comercio Interestatal (ICC) para controlar las tarifas abusivas de los ferrocarriles, marcando un giro desde el 'laissez-faire' hacia la supervisión gubernamental.",
+    "image": "/images/ley-de-comercio-interestatal-1887.jpg",
+    "modernConnection": "Estableció el modelo para las agencias federales de regulación que hoy supervisan sectores clave de la economía, desde las comunicaciones (FCC) hasta las finanzas (SEC).",
     "significance": 8,
-    "tags": ["regulation", "railroads"],
+    "tags": ["regulación", "gobierno", "ferrocarriles"],
     "sources": [
-      {
-        "title": "Interstate Commerce Act (1887)",
-        "url": "https://www.archives.gov/milestone-documents"
-      },
       {
         "title": "Building the American Republic, Vol. 2",
         "author": "Dailey",
@@ -95,20 +79,17 @@
   },
   {
     "id": 5,
-    "title": "Haymarket Affair",
-    "year": 1886,
-    "latitude": 41.8781,
-    "longitude": -87.6298,
-    "description": "A labor rally in Chicago for the eight‑hour day turned violent, leading to fatalities and the trial of anarchists; it became a defining moment for the labor movement.",
-    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-    "modernConnection": "Shapes global labor commemoration (May Day) and frames ongoing debates over policing, protest, and worker rights.",
-    "significance": 8,
-    "tags": ["labor", "protest"],
+    "title": "Ley Sherman Antitrust",
+    "year": 1890,
+    "latitude": 38.9072,
+    "longitude": -77.0369,
+    "description": "El Congreso promulgó la primera ley federal para prohibir explícitamente los monopolios y las 'combinaciones que restrinjan el comercio'. Aunque inicialmente de aplicación débil, se convirtió en la piedra angular de la política antimonopolio de EE.UU.",
+    "image": "/images/Ley-Sherman-Antitrust-1890.jpeg",
+    "modernConnection": "Sigue siendo la base legal para las demandas antimonopolio modernas contra grandes corporaciones, incluyendo las investigaciones sobre fusiones y el poder de las plataformas digitales.",
+    "significance": 10,
+    "prominent": true,
+    "tags": ["antimonopolio", "ley", "gobierno"],
     "sources": [
-      {
-        "title": "Chicago Historical Society: Haymarket Affair",
-        "url": "https://www.chicagohistory.org/"
-      },
       {
         "title": "Building the American Republic, Vol. 2",
         "author": "Dailey",
@@ -118,295 +99,228 @@
   },
   {
     "id": 6,
-    "title": "Homestead Strike",
+    "title": "Apertura de Ellis Island",
     "year": 1892,
-    "latitude": 40.407,
-    "longitude": -79.911,
-    "description": "Steelworkers struck at Carnegie’s Homestead mill; a violent clash with Pinkertons and state militia ensued, weakening organized labor in heavy industry.",
-    "image": "https://images.unsplash.com/photo-1541746972996-4e0b0f93e586?w=400&h=300&fit=crop",
-    "modernConnection": "Highlights the power imbalance between large firms and labor—echoing in today’s debates over unionization in logistics and tech.",
+    "latitude": 40.6995,
+    "longitude": -74.0396,
+    "description": "Se inauguró la estación federal de inmigración de Ellis Island, procesando a más de 12 millones de inmigrantes que llegaron para proveer la mano de obra esencial para las fábricas y el crecimiento urbano de la nación.",
+    "image": "/images/Apertura-de-Ellis-Island-1892.jpg",
+    "modernConnection": "Simboliza el debate perenne en EE.UU. sobre la inmigración. Las discusiones actuales sobre política fronteriza, mano de obra y la identidad nacional como 'nación de inmigrantes' tienen sus raíces en esta era.",
     "significance": 8,
-    "tags": ["labor", "steel"],
+    "tags": ["inmigración", "urbanización", "sociedad"],
     "sources": [
       {
-        "title": "Homestead Strike – Encyclopedia of U.S. Labor",
-        "url": "https://www.britannica.com/event/Homestead-Strike"
+        "title": "Building the American Republic, Vol. 2",
+        "author": "Dailey",
+        "year": 2018
       }
     ]
   },
   {
     "id": 7,
-    "title": "Sherman Antitrust Act",
-    "year": 1890,
-    "latitude": 38.9072,
-    "longitude": -77.0369,
-    "description": "Congress passed the first federal law aimed at curbing trusts and monopolies.",
-    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=300&fit=crop",
-    "modernConnection": "Provides the legal backbone for modern antitrust enforcement against dominant platforms and mergers.",
+    "title": "Huelga de Homestead",
+    "year": 1892,
+    "latitude": 40.407,
+    "longitude": -79.911,
+    "description": "Una violenta huelga en la acería de Andrew Carnegie en Homestead, Pensilvania. El conflicto entre los trabajadores y los detectives privados de Pinkerton, seguido de la intervención de la milicia estatal, resultó en una derrota aplastante para los sindicatos del acero.",
+    "image": "/images/huelga-de-homestead-1892 (1).jpg",
+    "modernConnection": "Ejemplifica el desequilibrio de poder entre las grandes corporaciones y el trabajo organizado, un tema que resurge en los esfuerzos de sindicalización en gigantes logísticos y tecnológicos como Amazon.",
     "significance": 9,
-    "prominent": true,
-    "tags": ["antitrust", "law"],
+    "tags": ["laboral", "acero", "conflicto"],
     "sources": [
       {
-        "title": "Sherman Antitrust Act (1890)",
-        "url": "https://www.ourdocuments.gov/"
+        "title": "Building the American Republic, Vol. 2",
+        "author": "Dailey",
+        "year": 2018
       }
     ]
   },
   {
     "id": 8,
-    "title": "Ellis Island Opens",
-    "year": 1892,
-    "latitude": 40.6995,
-    "longitude": -74.0396,
-    "description": "The federal immigration station at Ellis Island opened, processing millions during peak industrial growth and urbanization.",
-    "image": "https://images.unsplash.com/photo-1444723121867-7a241cacace9?w=400&h=300&fit=crop",
-    "modernConnection": "Frames debates over immigration policy, labor supply, and American identity that persist today.",
-    "significance": 7,
-    "tags": ["immigration", "urbanization"],
+    "title": "Pánico de 1893",
+    "year": 1893,
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "description": "Una grave crisis económica que provocó quiebras bancarias masivas, desempleo y agitación social. La severidad de la crisis expuso la inestabilidad del sistema financiero industrial y fortaleció las demandas por una reforma monetaria y bancaria.",
+    "image": "/images/Panico-de-1893.jpg",
+    "modernConnection": "Demostró la necesidad de un banco central para estabilizar la economía, sentando las bases para la creación de la Reserva Federal y prefigurando las respuestas gubernamentales a crisis financieras posteriores como la de 2008.",
+    "significance": 8,
+    "tags": ["finanzas", "crisis", "economía"],
     "sources": [
       {
-        "title": "Statue of Liberty – Ellis Island Foundation",
-        "url": "https://www.libertyellisfoundation.org/"
+        "title": "Building the American Republic, Vol. 2",
+        "author": "Dailey",
+        "year": 2018
       }
     ]
   },
   {
     "id": 9,
-    "title": "Panic of 1893",
-    "year": 1893,
-    "latitude": 40.7128,
-    "longitude": -74.006,
-    "description": "A severe economic depression led to bank failures and mass unemployment, intensifying calls for monetary and regulatory reforms.",
-    "image": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=400&h=300&fit=crop",
-    "modernConnection": "Early test of federal capacity to stabilize finance; foreshadows later central banking and crisis responses.",
-    "significance": 8,
-    "tags": ["finance", "crisis"],
+    "title": "Huelga de Pullman",
+    "year": 1894,
+    "latitude": 41.6596,
+    "longitude": -87.5987,
+    "description": "Una huelga nacional de trabajadores ferroviarios que boicotearon los vagones Pullman. El gobierno federal intervino enérgicamente con una orden judicial y tropas, argumentando la necesidad de proteger el correo, lo que supuso otra gran derrota para el movimiento obrero.",
+    "image": "/images/Huelga-de-Pullman-1894.jpg",
+    "modernConnection": "Estableció el uso de órdenes judiciales como una poderosa herramienta anti-huelga y solidificó el papel del gobierno como garante del comercio interestatal por encima de las demandas laborales, un principio que aún influye en la ley laboral.",
+    "significance": 9,
+    "tags": ["laboral", "ferrocarriles", "conflicto"],
     "sources": [
       {
-        "title": "Federal Reserve Education: Panics of the 19th Century",
-        "url": "https://www.federalreserveeducation.org/"
+        "title": "Building the American Republic, Vol. 2",
+        "author": "Dailey",
+        "year": 2018
       }
     ]
   },
   {
     "id": 10,
-    "title": "Pullman Strike",
-    "year": 1894,
-    "latitude": 41.6596,
-    "longitude": -87.5987,
-    "description": "A nationwide railroad boycott led by Eugene V. Debs was broken by federal injunctions and troops; the Supreme Court upheld broad use of injunctions against labor.",
-    "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&h=300&fit=crop",
-    "modernConnection": "Precedents for federal intervention and labor law continue to shape organizing and strike strategy.",
-    "significance": 8,
-    "tags": ["labor", "railroads"],
+    "title": "Caso Northern Securities",
+    "year": 1904,
+    "latitude": 38.9072,
+    "longitude": -77.0369,
+    "description": "La Corte Suprema ordenó la disolución del trust ferroviario Northern Securities de J.P. Morgan. Fue la primera gran victoria del presidente Theodore Roosevelt como 'destructor de monopolios' y demostró que la Ley Sherman Antitrust podía ser utilizada eficazmente.",
+    "image": "/images/Caso-Northern-Securities-1904.jpg",
+    "modernConnection": "Es el precedente clave para el uso del poder federal para disolver una empresa por ser demasiado grande y poderosa, un argumento central en las propuestas actuales para 'romper' a las grandes empresas tecnológicas.",
+    "significance": 9,
+    "tags": ["antimonopolio", "ley", "gobierno"],
     "sources": [
       {
-        "title": "Debs v. United States (1919) context",
-        "url": "https://supreme.justia.com/"
+        "title": "Building the American Republic, Vol. 2",
+        "author": "Dailey",
+        "year": 2018
       }
     ]
   },
   {
     "id": 11,
-    "title": "J.P. Morgan Forms U.S. Steel",
-    "year": 1901,
-    "latitude": 40.7589,
-    "longitude": -73.9851,
-    "description": "J.P. Morgan created U.S. Steel by consolidating Carnegie Steel and others—the world’s first billion‑dollar corporation.",
-    "image": "https://images.unsplash.com/photo-1541746972996-4e0b0f93e586?w=400&h=300&fit=crop",
-    "modernConnection": "Establishes the model for mega‑mergers and corporate finance that persists into the era of trillion‑dollar firms.",
-    "significance": 9,
-    "tags": ["corporate", "steel"],
+    "title": "Publicación de 'La Jungla' de Upton Sinclair",
+    "year": 1906,
+    "latitude": 41.8781,
+    "longitude": -87.6298,
+    "description": "Esta novela de investigación ('muckraking') expuso las terribles condiciones sanitarias de la industria empacadora de carne de Chicago. Su impacto fue tan grande que provocó una indignación pública masiva y una demanda de acción gubernamental.",
+    "image": "/images/la-jungla-1906.jpg",
+    "modernConnection": "Demuestra el poder del periodismo de investigación para impulsar reformas políticas. Es un precursor de los reportajes modernos que exponen abusos en las cadenas de suministro globales o en las industrias alimentarias.",
+    "significance": 8,
+    "tags": ["muckraking", "regulación", "literatura"],
     "sources": [
       {
-        "title": "U.S. Steel – Company History",
-        "url": "https://www.ussteel.com/"
+        "title": "Building the American Republic, Vol. 2",
+        "author": "Dailey",
+        "year": 2018
       }
     ]
   },
   {
     "id": 12,
-    "title": "Wright Brothers First Flight",
-    "year": 1903,
-    "latitude": 36.0181,
-    "longitude": -75.6682,
-    "description": "Orville and Wilbur Wright achieved the first powered flight at Kitty Hawk, launching the aviation age.",
-    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop",
-    "modernConnection": "Innovation in aviation set the stage for global connectivity and modern aerospace industries.",
-    "significance": 10,
-    "tags": ["technology", "aviation"],
+    "title": "Leyes de Pureza de Alimentos y Medicamentos",
+    "year": 1906,
+    "latitude": 38.9072,
+    "longitude": -77.0369,
+    "description": "En respuesta directa a la indignación generada por 'La Jungla', el Congreso aprobó estas leyes pioneras de protección al consumidor, que prohibían los alimentos y medicamentos adulterados y mal etiquetados, y establecían la inspección federal de la carne.",
+    "image": "/images/Leyes-de-Pureza-de-Alimentos-y-Medicamentos-1906.jpg",
+    "modernConnection": "Estas leyes sentaron las bases para la creación de la moderna Administración de Alimentos y Medicamentos (FDA), la agencia federal encargada de proteger la salud pública en EE.UU.",
+    "significance": 9,
+    "tags": ["regulación", "consumidor", "gobierno"],
     "sources": [
       {
-        "title": "Wright Brothers Papers – Library of Congress",
-        "url": "https://www.loc.gov/collections/wright-brothers-papers/"
+        "title": "Building the American Republic, Vol. 2",
+        "author": "Dailey",
+        "year": 2018
       }
     ]
   },
   {
     "id": 13,
-    "title": "Northern Securities Co. v. United States",
-    "year": 1904,
-    "latitude": 38.9072,
-    "longitude": -77.0369,
-    "description": "The Supreme Court ordered the dissolution of the Northern Securities railroad trust—early proof that the Sherman Act could break up monopolies.",
-    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=300&fit=crop",
-    "modernConnection": "A key precedent for structural remedies in antitrust—relevant to platform breakups today.",
-    "significance": 8,
-    "tags": ["antitrust", "law"],
+    "title": "Producción del Modelo T de Ford",
+    "year": 1908,
+    "latitude": 42.3314,
+    "longitude": -83.0458,
+    "description": "Henry Ford revolucionó la industria con la producción en masa del Modelo T. La línea de ensamblaje móvil no solo hizo el automóvil accesible para la clase media, sino que transformó para siempre los métodos de fabricación y la cultura estadounidense.",
+    "image": "/images/Modelo-T-Ford-1908.jpg",
+    "modernConnection": "Los principios de la producción en masa de Ford (Fordismo) siguen influyendo en la automatización, la gestión de la cadena de suministro global y la búsqueda de eficiencia en la fabricación a gran escala, como en la producción de vehículos eléctricos.",
+    "significance": 10,
+    "prominent": true,
+    "tags": ["manufactura", "automotriz", "innovación"],
     "sources": [
       {
-        "title": "Northern Securities Co. v. U.S., 193 U.S. 197 (1904)",
-        "url": "https://supreme.justia.com/cases/federal/us/193/197/"
+        "title": "Building the American Republic, Vol. 2",
+        "author": "Dailey",
+        "year": 2018
       }
     ]
   },
   {
     "id": 14,
-    "title": "Pure Food & Drug and Meat Inspection Acts",
-    "year": 1906,
+    "title": "Disolución de Standard Oil",
+    "year": 1911,
     "latitude": 38.9072,
     "longitude": -77.0369,
-    "description": "Congress enacted consumer protection laws to regulate food and drug safety and meatpacking, responding to public outcry and muckraking exposés.",
-    "image": "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=400&h=300&fit=crop",
-    "modernConnection": "Foundation for the FDA and modern consumer protection regimes.",
-    "significance": 8,
-    "tags": ["regulation", "consumer"],
+    "description": "La Corte Suprema ordenó la disolución del gigantesco trust de Standard Oil en 34 compañías independientes, culminando la lucha antimonopolio de la Era Progresista y afirmando el poder del gobierno federal sobre las corporaciones más grandes.",
+    "image": "/images/Disolucion-de-Standard-Oil-1911.png",
+    "modernConnection": "Es el caso de disolución corporativa más famoso de la historia y el principal referente citado en los debates contemporáneos sobre si el gobierno debería forzar la división de gigantes tecnológicos como Meta o Google.",
+    "significance": 9,
+    "tags": ["antimonopolio", "ley", "petróleo"],
     "sources": [
       {
-        "title": "U.S. FDA – Historical Highlights",
-        "url": "https://www.fda.gov/"
+        "title": "Building the American Republic, Vol. 2",
+        "author": "Dailey",
+        "year": 2018
       }
     ]
   },
   {
     "id": 15,
-    "title": "Model T Production Begins",
-    "year": 1908,
-    "latitude": 42.3314,
-    "longitude": -83.0458,
-    "description": "Ford began mass production of the Model T in Detroit, making automobiles affordable for ordinary Americans and transforming transportation and manufacturing.",
-    "image": "https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=400&h=300&fit=crop",
-    "modernConnection": "Mass production techniques inform today’s automation, supply chains, and EV scaling.",
+    "title": "Incendio en la fábrica Triangle Shirtwaist",
+    "year": 1911,
+    "latitude": 40.7295,
+    "longitude": -73.9965,
+    "description": "Un devastador incendio en Nueva York mató a 146 trabajadores textiles, en su mayoría mujeres inmigrantes jóvenes, atrapadas por puertas cerradas y salidas de emergencia inadecuadas. La tragedia expuso el costo humano de la industria no regulada.",
+    "image": "/images/Incendio--fabrica-Triangle-Shirtwaist-1911.jpeg",
+    "modernConnection": "Fue el catalizador directo para la aprobación de leyes fundamentales sobre seguridad en el lugar de trabajo, códigos de construcción y protección laboral. Su legado se invoca en los debates sobre la seguridad en las cadenas de suministro globales (fast-fashion) y los derechos de los trabajadores.",
     "significance": 10,
     "prominent": true,
-    "tags": ["manufacturing", "automotive"],
+    "tags": ["laboral", "seguridad", "tragedia"],
     "sources": [
       {
-        "title": "The Henry Ford – Model T",
-        "url": "https://www.thehenryford.org/"
+        "title": "Building the American Republic, Vol. 2",
+        "author": "Dailey",
+        "year": 2018
       }
     ]
   },
   {
     "id": 16,
-    "title": "Upton Sinclair’s The Jungle",
-    "year": 1906,
-    "latitude": 41.8781,
-    "longitude": -87.6298,
-    "description": "Publication of The Jungle exposed unsanitary conditions in meatpacking and labor exploitation, galvanizing public support for federal regulation.",
-    "image": "https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=400&h=300&fit=crop",
-    "modernConnection": "Illustrates the power of investigative journalism to drive policy change—echoed in modern consumer and workplace reporting.",
-    "significance": 7,
-    "tags": ["muckraking", "labor"],
+    "title": "Creación de la Reserva Federal",
+    "year": 1913,
+    "latitude": 38.9072,
+    "longitude": -77.0369,
+    "description": "Tras una serie de pánicos financieros, el gobierno de EE.UU. creó la Reserva Federal, un sistema bancario central para gestionar la oferta monetaria, estabilizar la economía y supervisar a los bancos del país. Fue la reforma financiera más importante de la era.",
+    "image": "/images/Creacion-Reserva-Federal-1913.jpg",
+    "modernConnection": "La Reserva Federal ('la Fed') sigue siendo la institución económica más poderosa del país, y sus decisiones sobre las tasas de interés y la política monetaria son fundamentales para controlar la inflación y responder a crisis económicas, como se vio en 2008 y durante la pandemia de COVID-19.",
+    "significance": 10,
+    "prominent": true,
+    "tags": ["finanzas", "regulación", "gobierno"],
     "sources": [
       {
-        "title": "Upton Sinclair, The Jungle (1906)",
-        "url": "https://www.gutenberg.org/ebooks/140"
+        "title": "Building the American Republic, Vol. 2",
+        "author": "Dailey",
+        "year": 2018
       }
     ]
   },
   {
     "id": 17,
-    "title": "Hepburn Act",
-    "year": 1906,
-    "latitude": 38.9072,
-    "longitude": -77.0369,
-    "description": "The Hepburn Act strengthened the ICC’s power to set maximum railroad rates and extended its jurisdiction—deepening federal regulatory capacity.",
-    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=300&fit=crop",
-    "modernConnection": "Precedent for rate‑setting and oversight of network industries (e.g., telecom, utilities).",
-    "significance": 7,
-    "tags": ["regulation", "railroads"],
-    "sources": [
-      {
-        "title": "Hepburn Act (1906) – Our Documents",
-        "url": "https://www.ourdocuments.gov/"
-      }
-    ]
-  },
-  {
-    "id": 18,
-    "title": "Federal Reserve System Created",
-    "year": 1913,
-    "latitude": 38.9072,
-    "longitude": -77.0369,
-    "description": "The Federal Reserve Act created America’s central banking system to provide financial stability and regulate monetary policy.",
-    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=300&fit=crop",
-    "modernConnection": "The Fed remains central in crisis response and inflation control, evident in 2008 and COVID‑19 policy.",
-    "significance": 9,
-    "prominent": true,
-    "tags": ["finance", "regulation"],
-    "sources": [
-      {
-        "title": "Federal Reserve Act (1913)",
-        "url": "https://www.federalreservehistory.org/"
-      }
-    ]
-  },
-  {
-    "id": 19,
-    "title": "Triangle Shirtwaist Factory Fire",
-    "year": 1911,
-    "latitude": 40.7295,
-    "longitude": -73.9965,
-    "description": "A factory fire in New York City killed 146 workers, spurring major workplace safety reforms and labor protections.",
-    "image": "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=400&h=300&fit=crop",
-    "modernConnection": "Catalyst for building codes and occupational safety; frames today’s supply‑chain and workplace standards.",
-    "significance": 9,
-    "prominent": true,
-    "tags": ["labor", "safety"],
-    "sources": [
-      {
-        "title": "NYC Triangle Fire Archive",
-        "url": "https://trianglefire.ilr.cornell.edu/"
-      }
-    ]
-  },
-  {
-    "id": 20,
-    "title": "World War I Begins",
+    "title": "Inicio de la Primera Guerra Mundial",
     "year": 1914,
     "latitude": 38.9072,
     "longitude": -77.0369,
-    "description": "World War I began in Europe; U.S. neutrality gave way to entry in 1917, cementing America’s global industrial and military capacity.",
-    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-    "modernConnection": "WWI accelerated federal coordination of industry and labor—templates for later mobilizations and today’s emergency economic policies.",
-    "significance": 10,
-    "tags": ["war", "industry"],
+    "description": "El estallido de la guerra en Europa marcó el fin de la Era Progresista. Aunque EE.UU. se mantuvo neutral inicialmente, el conflicto demostró la inmensa capacidad industrial que el país había desarrollado, la cual sería decisiva tras su entrada en la guerra en 1917.",
+    "image": "/images/Inicio-Primera-Guerra-Mundial-1914.webp",
+    "modernConnection": "La movilización industrial para la guerra sentó las bases para la coordinación a gran escala entre el gobierno y la industria, un modelo que se replicaría en el New Deal, la Segunda Guerra Mundial y las políticas económicas de emergencia actuales.",
+    "significance": 8,
+    "tags": ["guerra", "industria", "geopolítica"],
     "sources": [
-      {
-        "title": "American Yawp – World War I",
-        "url": "https://www.americanyawp.com/"
-      }
-    ]
-  },
-  {
-    "id": 21,
-    "title": "Standard Oil Breakup",
-    "year": 1911,
-    "latitude": 38.9072,
-    "longitude": -77.0369,
-    "description": "In Standard Oil Co. v. United States, the Supreme Court ordered the dissolution of Standard Oil under the Sherman Act.",
-    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-    "modernConnection": "Archetype of structural antitrust remedies, frequently cited in debates over breaking up dominant tech platforms.",
-    "significance": 9,
-    "prominent": true,
-    "tags": ["antitrust", "law"],
-    "sources": [
-      {
-        "title": "Standard Oil Co. v. United States, 221 U.S. 1 (1911)",
-        "url": "https://supreme.justia.com/cases/federal/us/221/1/"
-      },
       {
         "title": "Building the American Republic, Vol. 2",
         "author": "Dailey",
