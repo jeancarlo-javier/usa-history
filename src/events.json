@@ -25,7 +25,6 @@
     "image": "https://images.unsplash.com/photo-1606838132738-aa7c2513d376?w=400&h=300&fit=crop",
     "modernConnection": "Edison's research model and infrastructure buildout prefigure modern R&D ecosystems and platform technologies.",
     "significance": 10,
-    "prominent": true,
     "tags": ["technology", "electricity"],
     "sources": [
       { "title": "Edison’s Patent (U.S. 223,898)", "url": "https://patents.google.com/patent/US223898A" },
@@ -42,7 +41,6 @@
     "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
     "modernConnection": "Standard Oil’s consolidation catalyzed antitrust law—paralleling today’s concerns about platform dominance in big tech.",
     "significance": 9,
-    "prominent": true,
     "tags": ["antitrust", "corporate"],
     "sources": [
       { "title": "Sherman Antitrust Act (1890)", "url": "https://www.ourdocuments.gov/" },
@@ -59,7 +57,6 @@
     "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=300&fit=crop",
     "modernConnection": "Establishes a template for sector‑specific regulation and independent commissions used throughout the 20th century and today.",
     "significance": 8,
-    "prominent": true,
     "tags": ["regulation", "railroads"],
     "sources": [
       { "title": "Interstate Commerce Act (1887)", "url": "https://www.archives.gov/milestone-documents" },
@@ -168,7 +165,6 @@
     "image": "https://images.unsplash.com/photo-1541746972996-4e0b0f93e586?w=400&h=300&fit=crop",
     "modernConnection": "Establishes the model for mega‑mergers and corporate finance that persists into the era of trillion‑dollar firms.",
     "significance": 9,
-    "prominent": true,
     "tags": ["corporate", "steel"],
     "sources": [
       { "title": "U.S. Steel – Company History", "url": "https://www.ussteel.com/" }
@@ -184,7 +180,6 @@
     "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop",
     "modernConnection": "Innovation in aviation set the stage for global connectivity and modern aerospace industries.",
     "significance": 10,
-    "prominent": true,
     "tags": ["technology", "aviation"],
     "sources": [
       { "title": "Wright Brothers Papers – Library of Congress", "url": "https://www.loc.gov/collections/wright-brothers-papers/" }
@@ -200,7 +195,6 @@
     "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=300&fit=crop",
     "modernConnection": "A key precedent for structural remedies in antitrust—relevant to platform breakups today.",
     "significance": 8,
-    "prominent": true,
     "tags": ["antitrust", "law"],
     "sources": [
       { "title": "Northern Securities Co. v. U.S., 193 U.S. 197 (1904)", "url": "https://supreme.justia.com/cases/federal/us/193/197/" }
@@ -309,7 +303,6 @@
     "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
     "modernConnection": "WWI accelerated federal coordination of industry and labor—templates for later mobilizations and today’s emergency economic policies.",
     "significance": 10,
-    "prominent": true,
     "tags": ["war", "industry"],
     "sources": [
       { "title": "American Yawp – World War I", "url": "https://www.americanyawp.com/" }
