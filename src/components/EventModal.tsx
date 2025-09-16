@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface Event {
   id: number;
@@ -43,8 +43,18 @@ export default function EventModal({ event, onClose }: EventModalProps) {
             onClick={onClose}
             className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white p-2 rounded-full hover:bg-black/70 transition-all duration-300 border border-amber-600/30"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
@@ -58,28 +68,48 @@ export default function EventModal({ event, onClose }: EventModalProps) {
           </div>
 
           <div className="mb-6">
-            <h3 className="text-lg font-semibold text-amber-200 mb-2">Historical Context</h3>
+            <h3 className="text-lg font-semibold text-amber-200 mb-2">
+              Contexto Histórico
+            </h3>
             <p className="text-gray-300 leading-relaxed">{event.description}</p>
           </div>
 
           <div className="bg-amber-900/80 backdrop-blur-sm p-4 rounded-lg border border-amber-600/30">
             <h3 className="text-lg font-semibold text-amber-100 mb-2 flex items-center">
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              <svg
+                className="w-5 h-5 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
               </svg>
-              Modern Connection
+              Conexión Moderna
             </h3>
-            <p className="text-amber-200 leading-relaxed">{event.modernConnection}</p>
+            <p className="text-amber-200 leading-relaxed">
+              {event.modernConnection}
+            </p>
           </div>
 
           <div className="mt-4 flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <span className="text-sm text-gray-400">Historical Significance:</span>
+              <span className="text-sm text-gray-400">
+                Significado Histórico:
+              </span>
               <div className="flex">
                 {[...Array(10)].map((_, i) => (
                   <svg
                     key={i}
-                    className={`w-4 h-4 ${i < event.significance ? 'text-amber-400' : 'text-gray-600'}`}
+                    className={`w-4 h-4 ${
+                      i < event.significance
+                        ? "text-amber-400"
+                        : "text-gray-600"
+                    }`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >

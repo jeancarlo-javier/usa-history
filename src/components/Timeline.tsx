@@ -146,7 +146,9 @@ export default function Timeline({
               const bottomOffsetPx =
                 lane === 0
                   ? BASELINE_OFFSET_PX - DOT_RADIUS_PX
-                  : BASELINE_OFFSET_PX + POINT_ABOVE_LINE_PX + (lane - 1) * laneGapPx;
+                  : BASELINE_OFFSET_PX +
+                    POINT_ABOVE_LINE_PX +
+                    (lane - 1) * laneGapPx;
               const isMostImportant = !!event.prominent;
               const isImportant = !isMostImportant && event.significance >= 9;
 
@@ -189,19 +191,21 @@ export default function Timeline({
                           onClick={() => openEventClick(event)}
                           className="text-xs text-amber-400 hover:text-amber-200 transition-colors duration-200 mt-1"
                         >
-                          Read More
+                          Leer Más
                         </button>
                       </div>
                     </div>
                   ) : (
                     <div className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 w-max px-3 py-2 bg-gradient-to-b from-black/95 to-gray-900/95 backdrop-blur-sm text-white text-xs rounded-xl border border-amber-600/30 opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-xl z-50">
-                      <div className="font-semibold text-amber-100">{event.title}</div>
+                      <div className="font-semibold text-amber-100">
+                        {event.title}
+                      </div>
                       <div className="text-gray-300">{event.year}</div>
                       <button
                         onClick={() => openEventClick(event)}
                         className="text-amber-400 hover:text-amber-200 transition-colors duration-200 mt-1 text-xs"
                       >
-                        Read More
+                        Leer Más
                       </button>
                       {/* Tooltip arrow */}
                       <div className="absolute top-full left-1/2 -translate-x-1/2 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/95"></div>

@@ -112,17 +112,18 @@ function App() {
       <div className="fixed top-8 left-1/2 transform -translate-x-1/2 z-10">
         <div className="bg-gradient-to-b from-black/90 to-gray-900/80 border border-amber-600/30 rounded-xl px-8 py-6 text-center shadow-2xl backdrop-blur-sm">
           <h1 className="text-4xl font-bold text-amber-100 mb-2">
-            Industrialization and Economic Transformation
+            Industrialización y Transformación Económica
           </h1>
           <p className="text-lg text-gray-300">
-            United States History: 1877-1914
+            Historia de Estados Unidos: 1877-1914
           </p>
           <p className="mt-3 text-sm text-gray-300 max-w-3xl leading-relaxed">
-            Thesis: Rapid industrialization and the rise of corporate power
-            (1877–1914) transformed American life—driving urbanization and mass
-            immigration—while provoking landmark government regulation and labor
-            activism that still frame today's debates over antitrust, worker
-            protections, and consumer safety.
+            Tesis: La rápida industrialización y el ascenso del poder
+            corporativo (1877–1914) transformaron la vida
+            estadounidense—impulsando la urbanización y la inmigración
+            masiva—mientras provocaban regulaciones gubernamentales emblemáticas
+            y activismo laboral que aún enmarcan los debates actuales sobre
+            antimonopolio, protecciones laborales y seguridad del consumidor.
           </p>
         </div>
       </div>
@@ -154,7 +155,7 @@ function App() {
         onClick={() => setShowReferences(true)}
         className="fixed top-8 right-8 z-20 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg border border-blue-300/40"
       >
-        References
+        Referencias
       </button>
 
       {/* References Modal */}
@@ -168,19 +169,19 @@ function App() {
           <div className="bg-white rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl p-6">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-2xl font-bold text-gray-900">
-                References & Required Readings
+                Referencias y Lecturas Requeridas
               </h2>
               <button
                 onClick={() => setShowReferences(false)}
                 className="text-gray-600 hover:text-gray-900"
               >
-                Close
+                Cerrar
               </button>
             </div>
             <div className="space-y-6 text-sm">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  Required Readings
+                  Lecturas Requeridas
                 </h3>
                 <ul className="list-disc ml-6 space-y-1 text-gray-700">
                   <li>
@@ -208,7 +209,7 @@ function App() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  Event Sources
+                  Fuentes de Eventos
                 </h3>
                 <ul className="list-disc ml-6 space-y-2 text-gray-700">
                   {Array.isArray(eventsData) &&
