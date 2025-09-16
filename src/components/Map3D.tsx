@@ -1,5 +1,5 @@
 import DeckGL from '@deck.gl/react';
-import { ColumnLayer } from '@deck.gl/layers';
+import { ScatterplotLayer } from '@deck.gl/layers';
 import Map from 'react-map-gl/mapbox';
 import type { PickingInfo } from '@deck.gl/core';
 import eventsData from '../events.json';
@@ -17,48 +17,32 @@ interface Event {
 }
 
 interface Map3DProps {
-  selectedYear: number;
   onEventClick: (event: Event) => void;
+  viewState: any;
+  onViewStateChange: (viewState: any) => void;
 }
 
-const INITIAL_VIEW_STATE = {
-  longitude: -95.7129,
-  latitude: 37.0902,
-  zoom: 4,
-  bearing: 0,
-  pitch: 45
-};
-
-export default function Map3D({ selectedYear, onEventClick }: Map3DProps) {
+export default function Map3D({ onEventClick, viewState, onViewStateChange }: Map3DProps) {
   const mapboxToken = (import.meta.env.VITE_MAPBOX_TOKEN as string | undefined) ?? undefined;
 
-  const filteredEvents = eventsData.filter((event: Event) => event.year <= selectedYear);
-
   const layers = [
-    new ColumnLayer<Event>({
+    new ScatterplotLayer<Event>({
       id: 'historical-events',
-      data: filteredEvents,
-      diskResolution: 12,
-      radius: 8000,
-      extruded: true,
+      data: eventsData,
       pickable: true,
-      elevationScale: 1,
+      opacity: 0.8,
+      stroked: true,
+      filled: true,
+      radiusScale: 6,
+      radiusMinPixels: 5,
+      radiusMaxPixels: 100,
+      lineWidthMinPixels: 1,
       getPosition: (d: Event) => [d.longitude, d.latitude],
       getFillColor: (d: Event) => {
-        const age = selectedYear - d.year;
-        const intensity = Math.max(0.3, 1 - age / 40);
-        return [
-          Math.round(255 * intensity),
-          Math.round(100 * intensity),
-          Math.round(50 * intensity),
-          180
-        ];
+        const intensity = d.significance / 10;
+        return [255, 140, 0, Math.round(255 * intensity)];
       },
-      getElevation: (d: Event) => d.significance * 1500,
-      updateTriggers: {
-        getFillColor: [selectedYear],
-        getElevation: [selectedYear]
-      },
+      getLineColor: [0, 0, 0],
       onHover: (info: PickingInfo<Event>) => {
         if (info.object) {
           document.body.style.cursor = 'pointer';
@@ -76,8 +60,9 @@ export default function Map3D({ selectedYear, onEventClick }: Map3DProps) {
 
   return (
     <DeckGL
-      initialViewState={INITIAL_VIEW_STATE}
-      controller={true}
+      viewState={viewState}
+      onViewStateChange={onViewStateChange}
+      controller={{dragRotate: true, dragPan: false, scrollZoom: false}}
       layers={layers}
       style={{ position: 'relative', width: '100%', height: '100vh' }}
       getTooltip={({object}) => object ? `${object.title} (${object.year})` : null}

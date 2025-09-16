@@ -33,17 +33,6 @@
     "significance": 9
   },
   {
-    "id": 4,
-    "title": "Brooklyn Bridge Opens",
-    "year": 1883,
-    "latitude": 40.7061,
-    "longitude": -73.9969,
-    "description": "The Brooklyn Bridge opened as the world's longest suspension bridge, symbolizing American engineering prowess and connecting Manhattan and Brooklyn.",
-    "image": "https://images.unsplash.com/photo-1541606680725-9e4b18b2a9a8?w=400&h=300&fit=crop",
-    "modernConnection": "This engineering marvel established America as a leader in large-scale infrastructure projects, inspiring modern megaprojects like smart cities and sustainable transportation networks.",
-    "significance": 7
-  },
-  {
     "id": 5,
     "title": "Haymarket Affair",
     "year": 1886,
@@ -55,17 +44,6 @@
     "significance": 8
   },
   {
-    "id": 6,
-    "title": "Statue of Liberty Dedicated",
-    "year": 1886,
-    "latitude": 40.6892,
-    "longitude": -74.0445,
-    "description": "The Statue of Liberty was dedicated in New York Harbor as a symbol of freedom and democracy, welcoming millions of immigrants to America.",
-    "image": "https://images.unsplash.com/photo-1499719499953-8febd43e0b3b?w=400&h=300&fit=crop",
-    "modernConnection": "The statue remains a powerful symbol in modern immigration debates, representing America's identity as a nation of immigrants while highlighting ongoing discussions about border policy and refugee acceptance.",
-    "significance": 6
-  },
-  {
     "id": 7,
     "title": "Sherman Antitrust Act",
     "year": 1890,
@@ -75,39 +53,6 @@
     "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=300&fit=crop",
     "modernConnection": "This landmark legislation continues to shape modern antitrust enforcement against tech giants, pharmaceutical companies, and other industries accused of anti-competitive practices.",
     "significance": 9
-  },
-  {
-    "id": 8,
-    "title": "Carnegie Steel Company Founded",
-    "year": 1892,
-    "latitude": 40.4406,
-    "longitude": -79.9959,
-    "description": "Andrew Carnegie founded Carnegie Steel Company in Pittsburgh, which became the largest steel producer in the world and dominated American steel production.",
-    "image": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&h=300&fit=crop",
-    "modernConnection": "Carnegie's vertical integration strategy is mirrored by modern tech companies like Apple and Amazon, which control multiple aspects of their supply chains and distribution networks.",
-    "significance": 8
-  },
-  {
-    "id": 9,
-    "title": "Pullman Strike",
-    "year": 1894,
-    "latitude": 41.6934,
-    "longitude": -87.6061,
-    "description": "The Pullman Strike began in Chicago when railroad workers protested wage cuts and high rents in company housing, leading to a nationwide railroad boycott.",
-    "image": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=400&h=300&fit=crop",
-    "modernConnection": "This strike highlighted issues of corporate control over workers' lives that resonate today with company towns created by tech giants and debates over employer-provided housing and benefits.",
-    "significance": 7
-  },
-  {
-    "id": 10,
-    "title": "Spanish-American War Begins",
-    "year": 1898,
-    "latitude": 25.7617,
-    "longitude": -80.1918,
-    "description": "The Spanish-American War began, marking America's emergence as a global imperial power with territories in the Caribbean and Pacific.",
-    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-    "modernConnection": "This war established America's role as a global superpower, setting precedents for international intervention that continue to influence foreign policy and military engagement worldwide.",
-    "significance": 8
   },
   {
     "id": 11,
@@ -132,28 +77,6 @@
     "significance": 10
   },
   {
-    "id": 13,
-    "title": "Ford Motor Company Founded",
-    "year": 1903,
-    "latitude": 42.3314,
-    "longitude": -83.0458,
-    "description": "Henry Ford founded the Ford Motor Company in Detroit, which would revolutionize manufacturing with the assembly line and make automobiles affordable for the masses.",
-    "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400&h=300&fit=crop",
-    "modernConnection": "Ford's mass production methods transformed manufacturing globally and continue to influence modern automation, robotics, and the electric vehicle revolution led by companies like Tesla.",
-    "significance": 10
-  },
-  {
-    "id": 14,
-    "title": "San Francisco Earthquake",
-    "year": 1906,
-    "latitude": 37.7749,
-    "longitude": -122.4194,
-    "description": "A devastating earthquake and fire destroyed much of San Francisco, leading to major advances in building codes and urban planning.",
-    "image": "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=400&h=300&fit=crop",
-    "modernConnection": "This disaster led to modern earthquake engineering and emergency preparedness systems that inform current responses to natural disasters and climate change adaptation strategies.",
-    "significance": 7
-  },
-  {
     "id": 15,
     "title": "Model T Production Begins",
     "year": 1908,
@@ -165,28 +88,6 @@
     "significance": 10
   },
   {
-    "id": 16,
-    "title": "NAACP Founded",
-    "year": 1909,
-    "latitude": 40.7589,
-    "longitude": -73.9851,
-    "description": "The National Association for the Advancement of Colored People was founded in New York City to fight for civil rights and racial equality.",
-    "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=400&h=300&fit=crop",
-    "modernConnection": "The NAACP's founding established organized civil rights advocacy that continues today through organizations fighting systemic racism, voting rights, and social justice reform.",
-    "significance": 9
-  },
-  {
-    "id": 17,
-    "title": "Triangle Shirtwaist Fire",
-    "year": 1911,
-    "latitude": 40.7282,
-    "longitude": -73.9942,
-    "description": "A fire at the Triangle Shirtwaist Factory in New York City killed 146 workers, mostly young immigrant women, leading to major workplace safety reforms.",
-    "image": "https://images.unsplash.com/photo-1541746972996-4e0b0f93e586?w=400&h=300&fit=crop",
-    "modernConnection": "This tragedy established modern workplace safety regulations and labor protections that continue to evolve with new challenges in gig work, remote employment, and industrial automation.",
-    "significance": 8
-  },
-  {
     "id": 18,
     "title": "Federal Reserve System Created",
     "year": 1913,
@@ -195,17 +96,6 @@
     "description": "The Federal Reserve Act was signed in Washington D.C., creating America's central banking system to provide financial stability and regulate monetary policy.",
     "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=300&fit=crop",
     "modernConnection": "The Federal Reserve continues to play a crucial role in managing economic crises, inflation, and financial stability, as seen during the 2008 financial crisis and COVID-19 pandemic responses.",
-    "significance": 9
-  },
-  {
-    "id": 19,
-    "title": "Panama Canal Opens",
-    "year": 1914,
-    "latitude": 9.0804,
-    "longitude": -79.6023,
-    "description": "The Panama Canal opened to shipping, dramatically reducing travel time between Atlantic and Pacific oceans and establishing American dominance in global trade routes.",
-    "image": "https://images.unsplash.com/photo-1578473112635-3d5f6dace90b?w=400&h=300&fit=crop",
-    "modernConnection": "The canal remains vital to global trade and demonstrates how infrastructure investments can reshape economic geography, similar to modern debates over broadband networks and supply chain resilience.",
     "significance": 9
   },
   {

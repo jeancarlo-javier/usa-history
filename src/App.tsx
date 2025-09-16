@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FlyToInterpolator } from "deck.gl";
 import Map3D from "./components/Map3D";
 import Timeline from "./components/Timeline";
 import EventModal from "./components/EventModal";
@@ -17,22 +18,45 @@ interface Event {
 }
 
 function App() {
-  const minYear = Math.min(...eventsData.map(e => e.year));
-  const maxYear = Math.max(...eventsData.map(e => e.year));
-
-  const [selectedYear, setSelectedYear] = useState<number>(minYear);
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
+  const [viewState, setViewState] = useState({
+    longitude: -95.7129,
+    latitude: 37.0902,
+    zoom: 4,
+    bearing: 0,
+    pitch: 45,
+    transitionDuration: 500,
+    transitionInterpolator: new FlyToInterpolator(),
+  });
 
   const handleEventClick = (event: Event) => {
     setSelectedEvent(event);
+    setViewState({
+      longitude: event.longitude,
+      latitude: event.latitude,
+      zoom: 6,
+      bearing: 0,
+      pitch: 45,
+      transitionDuration: 500,
+      transitionInterpolator: new FlyToInterpolator(),
+    });
   };
 
   const handleCloseModal = () => {
     setSelectedEvent(null);
+    setViewState({
+      longitude: -95.7129,
+      latitude: 37.0902,
+      zoom: 4,
+      bearing: 0,
+      pitch: 45,
+      transitionDuration: 500,
+      transitionInterpolator: new FlyToInterpolator(),
+    });
   };
 
-  const handleYearChange = (year: number) => {
-    setSelectedYear(year);
+  const handleViewStateChange = ({ viewState }) => {
+    setViewState(viewState);
   };
 
   return (
@@ -51,23 +75,16 @@ function App() {
 
       {/* 3D Map Background */}
       <Map3D
-        selectedYear={selectedYear}
         onEventClick={handleEventClick}
+        viewState={viewState}
+        onViewStateChange={handleViewStateChange}
       />
 
       {/* Timeline Component */}
-      <Timeline
-        selectedYear={selectedYear}
-        onYearChange={handleYearChange}
-        minYear={minYear}
-        maxYear={maxYear}
-      />
+      <Timeline events={eventsData} onEventClick={handleEventClick} />
 
       {/* Event Details Modal */}
-      <EventModal
-        event={selectedEvent}
-        onClose={handleCloseModal}
-      />
+      <EventModal event={selectedEvent} onClose={handleCloseModal} />
     </div>
   );
 }
