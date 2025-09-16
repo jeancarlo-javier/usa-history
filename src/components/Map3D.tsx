@@ -20,9 +20,11 @@ interface Map3DProps {
   onEventClick: (event: Event) => void;
   viewState: any;
   onViewStateChange: (viewState: any) => void;
+  selectedEvent: Event | null;
+  hoveredEvent: Event | null;
 }
 
-export default function Map3D({ onEventClick, viewState, onViewStateChange }: Map3DProps) {
+export default function Map3D({ onEventClick, viewState, onViewStateChange, selectedEvent, hoveredEvent }: Map3DProps) {
   const mapboxToken = (import.meta.env.VITE_MAPBOX_TOKEN as string | undefined) ?? undefined;
 
   const layers = [
@@ -39,10 +41,20 @@ export default function Map3D({ onEventClick, viewState, onViewStateChange }: Ma
       lineWidthMinPixels: 1,
       getPosition: (d: Event) => [d.longitude, d.latitude],
       getFillColor: (d: Event) => {
+        if (selectedEvent && d.id === selectedEvent.id) {
+          return [255, 0, 0, 255];
+        } else if (hoveredEvent && d.id === hoveredEvent.id) {
+          return [255, 140, 0, 255];
+        }
         const intensity = d.significance / 10;
         return [255, 140, 0, Math.round(255 * intensity)];
       },
-      getLineColor: [0, 0, 0],
+      getLineColor: (d: Event) => {
+        if (selectedEvent && d.id === selectedEvent.id) {
+          return [255, 255, 255];
+        }
+        return [0, 0, 0];
+      },
       onHover: (info: PickingInfo<Event>) => {
         if (info.object) {
           document.body.style.cursor = 'pointer';

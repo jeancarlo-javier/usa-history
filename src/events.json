@@ -19,7 +19,8 @@
     "description": "Thomas Edison received his patent for the incandescent light bulb in Menlo Park, New Jersey, revolutionizing lighting and laying the foundation for the electrical industry.",
     "image": "https://images.unsplash.com/photo-1606838132738-aa7c2513d376?w=400&h=300&fit=crop",
     "modernConnection": "Edison's innovation sparked the modern electrical grid system and established the research and development model that continues to drive technological advancement in Silicon Valley and beyond.",
-    "significance": 10
+    "significance": 10,
+    "prominent": true
   },
   {
     "id": 3,
@@ -30,7 +31,8 @@
     "description": "John D. Rockefeller formed the Standard Oil Trust in Cleveland, creating America's first major monopoly and controlling 90% of oil refining in the United States.",
     "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
     "modernConnection": "The Standard Oil monopoly led to antitrust legislation that continues to regulate big tech companies like Google, Amazon, and Meta, addressing similar concerns about market concentration and consumer protection.",
-    "significance": 9
+    "significance": 9,
+    "prominent": true
   },
   {
     "id": 5,
@@ -52,7 +54,8 @@
     "description": "The Sherman Antitrust Act was passed in Washington D.C., becoming the first major law to regulate monopolies and trusts in American business.",
     "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=300&fit=crop",
     "modernConnection": "This landmark legislation continues to shape modern antitrust enforcement against tech giants, pharmaceutical companies, and other industries accused of anti-competitive practices.",
-    "significance": 9
+    "significance": 9,
+    "prominent": true
   },
   {
     "id": 11,
@@ -63,7 +66,8 @@
     "description": "J.P. Morgan created U.S. Steel Corporation in New York, the world's first billion-dollar corporation, by consolidating Carnegie Steel and other companies.",
     "image": "https://images.unsplash.com/photo-1541746972996-4e0b0f93e586?w=400&h=300&fit=crop",
     "modernConnection": "Morgan's creation of the first billion-dollar corporation established the template for modern mega-mergers and the formation of today's trillion-dollar tech companies like Apple and Microsoft.",
-    "significance": 9
+    "significance": 9,
+    "prominent": true
   },
   {
     "id": 12,
@@ -74,7 +78,8 @@
     "description": "Orville and Wilbur Wright achieved the first powered flight at Kitty Hawk, North Carolina, launching the aviation age.",
     "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop",
     "modernConnection": "The Wright brothers' innovation spirit parallels modern aerospace advances, from SpaceX's reusable rockets to the development of electric aircraft and urban air mobility solutions.",
-    "significance": 10
+    "significance": 10,
+    "prominent": true
   },
   {
     "id": 15,
@@ -85,7 +90,8 @@
     "description": "Ford began mass production of the Model T in Detroit, making automobiles affordable for ordinary Americans and transforming transportation forever.",
     "image": "https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=400&h=300&fit=crop",
     "modernConnection": "The Model T's democratization of transportation mirrors how electric vehicles and autonomous driving technology are reshaping mobility and urban planning in the 21st century.",
-    "significance": 10
+    "significance": 10,
+    "prominent": true
   },
   {
     "id": 18,
@@ -96,7 +102,8 @@
     "description": "The Federal Reserve Act was signed in Washington D.C., creating America's central banking system to provide financial stability and regulate monetary policy.",
     "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=300&fit=crop",
     "modernConnection": "The Federal Reserve continues to play a crucial role in managing economic crises, inflation, and financial stability, as seen during the 2008 financial crisis and COVID-19 pandemic responses.",
-    "significance": 9
+    "significance": 9,
+    "prominent": true
   },
   {
     "id": 20,
@@ -107,6 +114,7 @@
     "description": "World War I began in Europe, initially with American neutrality, but eventually drawing the United States into global conflict and transforming America into a world power.",
     "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
     "modernConnection": "WWI established America's role in global conflicts and international diplomacy, setting precedents for modern military interventions and international cooperation through organizations like NATO and the UN.",
-    "significance": 10
+    "significance": 10,
+    "prominent": true
   }
 ]
